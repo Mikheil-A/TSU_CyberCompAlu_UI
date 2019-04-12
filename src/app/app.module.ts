@@ -9,7 +9,11 @@ import {HeaderComponent} from './components/shared/header/header.component';
 import {AuthenticationComponent} from './components/authentication/authentication.component';
 import {SignInComponent} from './components/authentication/sign-in/sign-in.component';
 import {StudentsComponent} from './components/students/students.component';
+import {StudentComponent} from './components/student/student.component';
 
+import {StudentInfoSidenavComponent} from './components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component';
+import {AddOrEditSeniorStudentDialogComponent} from './components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component';
+import {ConfirmSeniorStudentDeletionDialogComponent} from './components/shared/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
@@ -20,6 +24,8 @@ import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -29,7 +35,11 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     HeaderComponent,
     AuthenticationComponent,
     SignInComponent,
-    StudentsComponent
+    StudentsComponent,
+    StudentInfoSidenavComponent,
+    StudentComponent,
+    AddOrEditSeniorStudentDialogComponent,
+    ConfirmSeniorStudentDeletionDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +54,13 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatIconModule,
+    MatDialogModule
+  ],
+  entryComponents: [
+    AddOrEditSeniorStudentDialogComponent,
+    ConfirmSeniorStudentDeletionDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

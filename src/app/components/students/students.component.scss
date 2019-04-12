@@ -5,4 +5,22 @@
 
 table {
   width: 100%;
+
+  #full-name {
+    color: #4688f1;
+    cursor: pointer;
+  }
+}
+
+mat-sidenav-container {
+  ::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
+    //background-color: rgba(0,0,0,.6);
+    background-color: transparent;
+  }
+}
+
+#add-senior-student {
+  mat-icon {
+    font-size: 35px;
+  }
 }
