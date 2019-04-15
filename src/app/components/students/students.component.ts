@@ -22,9 +22,11 @@ const TESTDATA = [
 export class StudentsComponent implements OnInit {
   @ViewChild('sidenav') private _sidenav;
 
+  sidenavId: number = null;
+
 
   displayedColumns: string[] = ['isEmployed', 'fullName', 'startDate', 'endDate', 'editAndDeleteIcons'];
-  dataSource: MatTableDataSource;
+  dataSource: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -49,6 +51,7 @@ export class StudentsComponent implements OnInit {
   }
 
   openStudentInfoSideNav() {
+    this.sidenavId = 1;
     this._sidenav.open();
   }
 
@@ -58,5 +61,10 @@ export class StudentsComponent implements OnInit {
 
   openConfirmSeniorStudentDeletionDialog() {
     this._matDialog.open(ConfirmSeniorStudentDeletionDialogComponent);
+  }
+
+  openFilterGridSidenav() {
+    this.sidenavId = 2;
+    this._sidenav.open();
   }
 }

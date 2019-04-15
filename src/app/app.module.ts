@@ -12,6 +12,7 @@ import {StudentsComponent} from './components/students/students.component';
 import {StudentComponent} from './components/student/student.component';
 
 import {StudentInfoSidenavComponent} from './components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component';
+import {FilterGridSidenavComponent} from './components/shared/sidenavs/filter-grid-sidenav/filter-grid-sidenav.component';
 import {AddOrEditSeniorStudentDialogComponent} from './components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component';
 import {ConfirmSeniorStudentDeletionDialogComponent} from './components/shared/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component';
 
@@ -37,6 +38,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     SignInComponent,
     StudentsComponent,
     StudentInfoSidenavComponent,
+    FilterGridSidenavComponent,
     StudentComponent,
     AddOrEditSeniorStudentDialogComponent,
     ConfirmSeniorStudentDeletionDialogComponent

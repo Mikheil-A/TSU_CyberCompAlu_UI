@@ -4,7 +4,9 @@
                [fixedInViewport]="true"
                [autoFocus]="false" [disableClose]="false">
 
-    <app-student-info-sidenav></app-student-info-sidenav>
+    <app-student-info-sidenav *ngIf="sidenavId === 1"></app-student-info-sidenav>
+
+    <app-filter-grid-sidenav *ngIf="sidenavId === 2"></app-filter-grid-sidenav>
 
   </mat-sidenav>
 
@@ -12,18 +14,26 @@
 
     <app-header></app-header>
 
-    <button mat-button mat-icon-button
-            matTooltip="კურსდამთავრებულის დამატება"
-            id="add-senior-student"
-            (click)="openaddOrEditSeniorStudentDialog()">
-      <mat-icon>add_circle</mat-icon>
-    </button>
+    <div id="table-header">
+      <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+      </mat-form-field>
 
-    <mat-form-field>
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-    </mat-form-field>
+      <button mat-button mat-icon-button (click)="openFilterGridSidenav()">
+        <mat-icon>filter_list</mat-icon>
+      </button>
+
+      <button mat-button mat-icon-button
+              matTooltip="კურსდამთავრებულის დამატება"
+              id="add-senior-student"
+              (click)="openaddOrEditSeniorStudentDialog()">
+        <mat-icon>add_circle</mat-icon>
+      </button>
+    </div>
+
 
     <div class="mat-elevation-z8">
+
       <table mat-table [dataSource]="dataSource" matSort>
 
         <ng-container matColumnDef="isEmployed">

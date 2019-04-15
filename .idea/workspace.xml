@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a2efbfc4-bafb-4cd5-b348-c7db3cbd7700" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/students/students.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/students/students.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/components/students/students.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/students/students.component.scss" afterDir="false" />
@@ -14,6 +13,43 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="120">
+                    <caret line="4" selection-start-line="4" selection-end-line="4" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.scss">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="30">
+                    <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.ts">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="540">
+                    <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-413007263">
@@ -49,91 +85,69 @@
     <session id="1752517526">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="editorconfig" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="21" />
+          <entry key="html" value="25" />
           <entry key="json" value="2" />
           <entry key="md" value="7" />
           <entry key="png" value="4" />
-          <entry key="scss" value="19" />
-          <entry key="ts" value="27" />
+          <entry key="scss" value="21" />
+          <entry key="ts" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="21" />
+          <entry key="HTML" value="25" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="2" />
           <entry key="Markdown" value="7" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SCSS" value="19" />
-          <entry key="TypeScript" value="27" />
+          <entry key="SCSS" value="21" />
+          <entry key="TypeScript" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="783" />
+          <entry key="html" value="936" />
           <entry key="json" value="24" />
           <entry key="md" value="1" />
-          <entry key="scss" value="381" />
-          <entry key="ts" value="680" />
+          <entry key="scss" value="482" />
+          <entry key="ts" value="743" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="783" />
+          <entry key="HTML" value="936" />
           <entry key="JSON" value="24" />
           <entry key="Markdown" value="1" />
-          <entry key="SCSS" value="381" />
-          <entry key="TypeScript" value="680" />
+          <entry key="SCSS" value="482" />
+          <entry key="TypeScript" value="743" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="3" />
+          <entry key="Angular2LanguageService" value="6" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>full</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -163,12 +177,12 @@
         <option value="$PROJECT_DIR$/src/app/components/student/student.component.scss" />
         <option value="$PROJECT_DIR$/src/app/components/student/student.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/shared/dialogs/add-senior-student-dialog/add-senior-student-dialog.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/components/student/student.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/students/students.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/components/students/students.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/students/students.component.scss" />
-        <option value="$PROJECT_DIR$/src/app/components/student/student.component.ts" />
       </list>
     </option>
   </component>
@@ -241,7 +255,7 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+              <item name="sidenavs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
@@ -250,26 +264,8 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
-              <item name="add-or-edit-senior-student-dialog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
-              <item name="confirm-senior-student-deletion-dialog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="student" type="462c0819:PsiDirectoryNode" />
+              <item name="sidenavs" type="462c0819:PsiDirectoryNode" />
+              <item name="filter-grid-sidenav" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
@@ -328,12 +324,15 @@
       <workItem from="1550739797771" duration="393000" />
       <workItem from="1554880022771" duration="5689000" />
       <workItem from="1554991687045" duration="2192000" />
-      <workItem from="1555063678396" duration="6424000" />
+      <workItem from="1555063678396" duration="6469000" />
+      <workItem from="1555336482766" duration="173000" />
+      <workItem from="1555336660668" duration="4000" />
+      <workItem from="1555337151135" duration="2197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19080000" />
+    <option name="totallyTimeSpent" value="21499000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -348,7 +347,7 @@
     <frame x="2552" y="-1" width="2576" height="1416" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26099122" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.206235" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -362,9 +361,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
-      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="8" weight="0.7594108" />
+      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="8" weight="0.7086743" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32978722" />
+      <window_info anchor="bottom" auto_hide="true" id="TypeScript" order="10" weight="0.32651392" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -530,57 +529,10 @@
     <entry file="file://$PROJECT_DIR$/src/app/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/students/students.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/students/students.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="38" column="27" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/students/students.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="943">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -594,23 +546,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
-          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/shared/sidenavs/filter-grid-sidenav/filter-grid-sidenav.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/students/students.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2640">
+          <caret line="88" lean-forward="true" selection-start-line="88" selection-end-line="88" />
+          <folding>
+            <element signature="n#style#0;n#mat-sidenav-content#0;n#mat-sidenav-container#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/students/students.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/students/students.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
