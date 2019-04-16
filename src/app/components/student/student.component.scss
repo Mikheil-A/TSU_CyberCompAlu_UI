@@ -1,3 +1,17 @@
-#student-container {
+#student-grid-container {
   display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: repeat(3, auto);
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-items: center;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+
+  & > div{
+    background-color: orange;
+    width: 300px;
+    height: 300px;
+  }
 }

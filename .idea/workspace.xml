@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a2efbfc4-bafb-4cd5-b348-c7db3cbd7700" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/students/students.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/students/students.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/students/students.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/students/students.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/students/students.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/students/students.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/student/student.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/student/student.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/student/student.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/student/student.component.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +17,11 @@
       <content type="file-editors">
         <state>
           <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-            <file pinned="false" current-in-tab="false">
+            <file pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="120">
-                    <caret line="4" selection-start-line="4" selection-end-line="4" />
+                  <state relative-caret-position="720">
+                    <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
                   </state>
                 </provider>
               </entry>
@@ -31,17 +29,17 @@
             <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.scss">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="30">
-                    <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+                  <state relative-caret-position="510">
+                    <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file pinned="false" current-in-tab="true">
+            <file pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.ts">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="540">
-                    <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+                  <state relative-caret-position="60">
+                    <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
                   </state>
                 </provider>
               </entry>
@@ -85,12 +83,13 @@
     <session id="1752517526">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
+          <entry key="project.closed" value="6" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="3" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -102,7 +101,7 @@
           <entry key="md" value="7" />
           <entry key="png" value="4" />
           <entry key="scss" value="21" />
-          <entry key="ts" value="31" />
+          <entry key="ts" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -113,40 +112,41 @@
           <entry key="Markdown" value="7" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="SCSS" value="21" />
-          <entry key="TypeScript" value="31" />
+          <entry key="TypeScript" value="32" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="936" />
+          <entry key="html" value="1093" />
           <entry key="json" value="24" />
           <entry key="md" value="1" />
-          <entry key="scss" value="482" />
+          <entry key="scss" value="619" />
           <entry key="ts" value="743" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="936" />
+          <entry key="HTML" value="1093" />
           <entry key="JSON" value="24" />
           <entry key="Markdown" value="1" />
-          <entry key="SCSS" value="482" />
+          <entry key="SCSS" value="619" />
           <entry key="TypeScript" value="743" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="6" />
+          <entry key="Angular2LanguageService" value="7" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>full</find>
+      <find>ser-profile-photo.png</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,8 +174,6 @@
         <option value="$PROJECT_DIR$/src/styles.scss" />
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/components/student/student.component.scss" />
-        <option value="$PROJECT_DIR$/src/app/components/student/student.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/shared/dialogs/add-senior-student-dialog/add-senior-student-dialog.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts" />
         <option value="$PROJECT_DIR$/src/app/components/student/student.component.ts" />
@@ -183,6 +181,8 @@
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/components/students/students.component.html" />
         <option value="$PROJECT_DIR$/src/app/components/students/students.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/components/student/student.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/components/student/student.component.html" />
       </list>
     </option>
   </component>
@@ -215,6 +215,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -279,12 +280,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MSDA/lawyers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JSON" />
@@ -327,12 +327,13 @@
       <workItem from="1555063678396" duration="6469000" />
       <workItem from="1555336482766" duration="173000" />
       <workItem from="1555336660668" duration="4000" />
-      <workItem from="1555337151135" duration="2197000" />
+      <workItem from="1555337151135" duration="2386000" />
+      <workItem from="1555421812603" duration="1809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21499000" />
+    <option name="totallyTimeSpent" value="23497000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -345,9 +346,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="2552" y="-1" width="2576" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.206235" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20823342" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -361,9 +361,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
-      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="8" weight="0.7086743" />
+      <window_info active="true" anchor="bottom" auto_hide="true" id="Terminal" order="8" visible="true" weight="0.7086743" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" auto_hide="true" id="TypeScript" order="10" weight="0.32651392" />
+      <window_info anchor="bottom" auto_hide="true" id="TypeScript" order="10" weight="0.5310966" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -529,13 +529,6 @@
     <entry file="file://$PROJECT_DIR$/src/app/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -546,20 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -608,10 +587,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="60">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/components/student/student.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>
