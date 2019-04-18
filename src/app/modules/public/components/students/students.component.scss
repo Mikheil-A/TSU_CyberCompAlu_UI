@@ -14,7 +14,7 @@ table {
 
   tr {
     &:hover {
-      background-color: #F7F7FA;
+      background-color: #f7f7fa;
     }
 
     td {
@@ -32,8 +32,12 @@ table {
 
 mat-sidenav-container {
   ::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
-    //background-color: rgba(0,0,0,.6);
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, .6);
+    //background-color: transparent;
+  }
+
+  mat-sidenav-content {
+    //height: 100vh;
   }
 }
 
