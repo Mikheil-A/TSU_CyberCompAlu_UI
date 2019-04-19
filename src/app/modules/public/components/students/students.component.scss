@@ -31,13 +31,16 @@ table {
 }
 
 mat-sidenav-container {
-  ::ng-deep .mat-drawer-backdrop.mat-drawer-shown {
-    background-color: rgba(0, 0, 0, .6);
-    //background-color: transparent;
-  }
+  ::ng-deep {
+    .mat-drawer-backdrop.mat-drawer-shown {
+      background-color: transparent;
+    }
 
-  mat-sidenav-content {
-    //height: 100vh;
+    // making a sidenav close on outer click
+    .mat-drawer-backdrop {
+      position: fixed;
+      height: 115vh;
+    }
   }
 }
 

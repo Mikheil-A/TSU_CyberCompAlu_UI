@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
 
 
 
@@ -13,7 +14,7 @@ export class SignInComponent implements OnInit {
 
   isUsernameOrPasswordIsIncorrectMsgDisplayed: boolean = false;
 
-  constructor() {
+  constructor(private _router: Router) {
   }
 
 
@@ -33,6 +34,8 @@ export class SignInComponent implements OnInit {
     if (!this.signInFormGroup.invalid) {
       console.log('form is valid');
     }
+
+    this._router.navigate(['']);
   }
 
 }
