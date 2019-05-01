@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a2efbfc4-bafb-4cd5-b348-c7db3cbd7700" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/sign-in/sign-in.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/sign-in/sign-in.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/public/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/public/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/shared/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/shared/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/shared/shared.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/shared/shared.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/admin/admin.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,67 +49,67 @@
     <session id="1752517526">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.0" value="2" />
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.0" value="5" />
           <entry key="project.open.time.3" value="2" />
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="editorconfig" value="1" />
           <entry key="gitignore" value="1" />
-          <entry key="html" value="53" />
+          <entry key="html" value="58" />
           <entry key="js" value="1" />
           <entry key="json" value="5" />
           <entry key="md" value="8" />
           <entry key="png" value="4" />
-          <entry key="scss" value="34" />
-          <entry key="ts" value="73" />
+          <entry key="scss" value="36" />
+          <entry key="ts" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="53" />
+          <entry key="HTML" value="58" />
           <entry key="Image" value="4" />
           <entry key="JSON" value="5" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="8" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SCSS" value="34" />
-          <entry key="TypeScript" value="73" />
+          <entry key="SCSS" value="36" />
+          <entry key="TypeScript" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="1413" />
+          <entry key="html" value="1425" />
           <entry key="json" value="29" />
           <entry key="md" value="16" />
-          <entry key="scss" value="1049" />
-          <entry key="ts" value="1271" />
+          <entry key="scss" value="1054" />
+          <entry key="ts" value="1301" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="1413" />
+          <entry key="HTML" value="1425" />
           <entry key="JSON" value="29" />
           <entry key="Markdown" value="16" />
-          <entry key="SCSS" value="1049" />
-          <entry key="TypeScript" value="1271" />
+          <entry key="SCSS" value="1054" />
+          <entry key="TypeScript" value="1301" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="12" />
+          <entry key="Angular2LanguageService" value="14" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -159,7 +157,6 @@
         <option value="$PROJECT_DIR$/angular.json" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/app/app-routing.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/modules/admin/admin.module.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/mat/mat.module.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/auth/auth-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/admin/admin-routing.module.ts" />
@@ -168,11 +165,7 @@
         <option value="$PROJECT_DIR$/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/public/public.module.ts" />
         <option value="$PROJECT_DIR$/src/app/app.component.scss" />
-        <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss" />
-        <option value="$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.html" />
-        <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" />
-        <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.scss" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" />
@@ -181,6 +174,11 @@
         <option value="$PROJECT_DIR$/src/app/modules/shared/shared.module.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/shared/components/header/header.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" />
+        <option value="$PROJECT_DIR$/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.html" />
+        <option value="$PROJECT_DIR$/src/app/modules/admin/admin.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss" />
       </list>
     </option>
   </component>
@@ -212,7 +210,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -245,6 +242,60 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="student" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -255,27 +306,6 @@
               <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="modules" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="sidenavs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
@@ -287,15 +317,24 @@
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="students" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../MSDA/lawyers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.SCSS" />
@@ -347,12 +386,15 @@
       <workItem from="1555485243354" duration="4294000" />
       <workItem from="1555588773663" duration="753000" />
       <workItem from="1555589540436" duration="7294000" />
-      <workItem from="1555661078130" duration="6501000" />
+      <workItem from="1555661078130" duration="6521000" />
+      <workItem from="1556017271029" duration="976000" />
+      <workItem from="1556624808555" duration="2395000" />
+      <workItem from="1556697451352" duration="3503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43976000" />
+    <option name="totallyTimeSpent" value="50870000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,7 +408,7 @@
   <component name="ToolWindowManager">
     <frame x="2552" y="-1" width="2576" height="1416" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22022381" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22741807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -380,7 +422,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.51473" />
       <window_info anchor="bottom" auto_hide="true" id="Version Control" order="7" weight="0.59574467" />
-      <window_info active="true" anchor="bottom" auto_hide="true" id="Terminal" order="8" visible="true" weight="0.7373159" />
+      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="8" weight="0.7381342" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" auto_hide="true" id="TypeScript" order="10" weight="0.5310966" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -575,13 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/admin.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/mat/mat.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1410">
@@ -593,9 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -603,9 +635,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -613,9 +642,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,13 +656,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="930">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/public/public.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>
@@ -665,13 +684,6 @@
     <entry file="file://$PROJECT_DIR$/src/app/app.component.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
@@ -679,47 +691,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.ts">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/admin/admin-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/shared/shared.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -741,9 +719,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -754,16 +729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2161">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -771,17 +736,79 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.scss">
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
+        <state relative-caret-position="30">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/shared/shared.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/public.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="961">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/admin.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="86" lean-forward="true" selection-start-line="86" selection-end-line="86" />
+        <state relative-caret-position="961">
+          <caret line="92" lean-forward="true" selection-start-line="92" selection-end-line="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="961">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
