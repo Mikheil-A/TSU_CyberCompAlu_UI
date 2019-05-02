@@ -9,6 +9,7 @@ import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from './components/footer/footer.component';
 
 import {MatModule} from "../mat/mat.module";
+import {NgxSpinnerModule} from "ngx-spinner";
 
 
 
@@ -21,13 +22,15 @@ import {MatModule} from "../mat/mat.module";
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
-    MatModule
+    MatModule,
+    NgxSpinnerModule
   ],
   exports: [
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
     MatModule,
+    NgxSpinnerModule,
 
     HeaderComponent,
     FooterComponent

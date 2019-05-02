@@ -14,6 +14,7 @@ export class SignInComponent implements OnInit {
 
   isUsernameOrPasswordIsIncorrectMsgDisplayed: boolean = false;
 
+
   constructor(private _router: Router) {
   }
 

@@ -7,6 +7,12 @@
   .mat-form-field {
     flex-grow: 1;
   }
+
+  #add-senior-student {
+    mat-icon {
+      font-size: 35px;
+    }
+  }
 }
 
 table {
@@ -41,11 +47,5 @@ mat-sidenav-container {
       position: fixed;
       height: 115vh;
     }
-  }
-}
-
-#add-senior-student {
-  mat-icon {
-    font-size: 35px;
   }
 }

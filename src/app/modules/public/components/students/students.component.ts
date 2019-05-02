@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatDialog, MatPaginator, MatPaginatorIntl, MatSort, MatTableDataSource} from '@angular/material';
 import {AddOrEditSeniorStudentDialogComponent} from "../shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component";
 import {ConfirmSeniorStudentDeletionDialogComponent} from "../shared/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component";
-
+import {NgxSpinnerService} from "ngx-spinner";
 
 
 const TESTDATA = [
@@ -12,6 +12,7 @@ const TESTDATA = [
   {'isEmployed': false, 'fullName': 'test fullname', 'startDate': 'test startDate', 'endDate': 'test endDate'},
   {'isEmployed': false, 'fullName': 'test fullname', 'startDate': 'test startDate', 'endDate': 'test endDate'}
 ];
+
 
 
 @Component({
@@ -36,7 +37,8 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
 
-  constructor(private _matDialog: MatDialog) {
+  constructor(private _matDialog: MatDialog,
+              private _ngxSpinnerService: NgxSpinnerService) {
     super();
 
     this._setPaginatorInGeorgian();
@@ -47,6 +49,8 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    this._fetchGridData();
   }
 
 
@@ -55,6 +59,16 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     this.itemsPerPageLabel = 'ჩანაწერების რაოდენობა გვერდზე:';
     this.nextPageLabel = 'შემდეგი გვერდი';
     this.previousPageLabel = 'წინა გვერდი';
+  }
+
+  private _fetchGridData(filterByData?: object) {
+    this._ngxSpinnerService.show();
+
+    console.log(filterByData);
+
+    setTimeout(() => {
+      this._ngxSpinnerService.hide();
+    }, 1000);
   }
 
 
@@ -71,16 +85,31 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     this._sidenav.open();
   }
 
-  openaddOrEditSeniorStudentDialog() {
-    this._matDialog.open(AddOrEditSeniorStudentDialogComponent);
+  openAddOrEditSeniorStudentDialog() {
+    const dialogRef = this._matDialog.open(AddOrEditSeniorStudentDialogComponent);
+
+    dialogRef.afterClosed().subscribe(() => {
+      this._fetchGridData();
+    })
   }
 
   openConfirmSeniorStudentDeletionDialog() {
-    this._matDialog.open(ConfirmSeniorStudentDeletionDialogComponent);
+    const dialogRef = this._matDialog.open(ConfirmSeniorStudentDeletionDialogComponent);
+
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this._fetchGridData();
+      }
+    })
   }
 
   openFilterGridSidenav() {
     this.sidenavId = 2;
     this._sidenav.open();
+  }
+
+  filter(e) {
+    this._sidenav.close();
+    this._fetchGridData(e);
   }
 }

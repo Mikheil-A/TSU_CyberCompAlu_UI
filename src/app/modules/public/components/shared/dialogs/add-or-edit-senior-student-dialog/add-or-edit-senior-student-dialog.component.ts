@@ -10,12 +10,15 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 })
 export class AddOrEditSeniorStudentDialogComponent implements OnInit {
 
-  constructor(
-    public dialogRef: MatDialogRef<AddOrEditSeniorStudentDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {
+  constructor(private _matDialogRef: MatDialogRef<AddOrEditSeniorStudentDialogComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any) {
   }
 
   ngOnInit() {
   }
 
+
+  add() {
+    this._matDialogRef.close();
+  }
 }

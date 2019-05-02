@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+
+
 
 @Component({
   selector: 'app-filter-grid-sidenav',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilterGridSidenavComponent implements OnInit {
 
-  constructor() { }
+  @Output() onFilter = new EventEmitter<object>();
+
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+
+  load() {
+    this.onFilter.emit({});
+  }
 }
