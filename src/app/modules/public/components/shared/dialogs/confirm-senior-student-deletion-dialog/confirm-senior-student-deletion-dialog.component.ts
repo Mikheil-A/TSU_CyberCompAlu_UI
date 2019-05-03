@@ -11,10 +11,11 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 export class ConfirmSeniorStudentDeletionDialogComponent implements OnInit {
 
   constructor(private _matDialogRef: MatDialogRef<ConfirmSeniorStudentDeletionDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any) {
+              @Inject(MAT_DIALOG_DATA) private _matDialogData: any) {
   }
 
   ngOnInit() {
+    console.log(this._matDialogData);
   }
 
 

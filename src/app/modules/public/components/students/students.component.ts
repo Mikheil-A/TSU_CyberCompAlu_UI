@@ -85,6 +85,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     this._sidenav.open();
   }
 
+
   openAddOrEditSeniorStudentDialog() {
     const dialogRef = this._matDialog.open(AddOrEditSeniorStudentDialogComponent);
 

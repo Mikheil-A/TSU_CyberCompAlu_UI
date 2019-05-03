@@ -8,7 +8,6 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
   styleUrls: ['./filter-grid-sidenav.component.scss']
 })
 export class FilterGridSidenavComponent implements OnInit {
-
   @Output() onFilter = new EventEmitter<object>();
 
 
