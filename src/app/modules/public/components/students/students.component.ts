@@ -113,4 +113,12 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     this._sidenav.close();
     this._fetchGridData(e);
   }
+
+  onPagingChange(e) {
+    this._fetchGridData(e);
+  }
+
+  onTableSort(e) {
+    this._fetchGridData(e);
+  }
 }

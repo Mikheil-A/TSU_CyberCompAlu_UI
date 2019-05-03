@@ -35,7 +35,7 @@
 
     <div class="mat-elevation-z8">
 
-      <table mat-table [dataSource]="dataSource" matSort>
+      <table mat-table [dataSource]="dataSource" matSort (matSortChange)="onTableSort($event)">
 
         <ng-container matColumnDef="isEmployed">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>დასაქმების სტატუსი</th>
@@ -82,7 +82,7 @@
         </tr>
       </table>
 
-      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+      <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" (page)="onPagingChange($event)"></mat-paginator>
     </div>
 
 
