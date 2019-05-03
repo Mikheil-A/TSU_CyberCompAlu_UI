@@ -5,6 +5,7 @@ import {ConfirmSeniorStudentDeletionDialogComponent} from "../shared/dialogs/con
 import {NgxSpinnerService} from "ngx-spinner";
 
 
+
 const TESTDATA = [
   {'isEmployed': true, 'fullName': 'test fullname', 'startDate': 'test startDate', 'endDate': 'test endDate'},
   {'isEmployed': false, 'fullName': 'test fullname', 'startDate': 'test startDate', 'endDate': 'test endDate'},
@@ -89,8 +90,10 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   openAddOrEditSeniorStudentDialog() {
     const dialogRef = this._matDialog.open(AddOrEditSeniorStudentDialogComponent);
 
-    dialogRef.afterClosed().subscribe(() => {
-      this._fetchGridData();
+    dialogRef.afterClosed().subscribe((result) => {
+      if (result) {
+        this._fetchGridData();
+      }
     })
   }
 

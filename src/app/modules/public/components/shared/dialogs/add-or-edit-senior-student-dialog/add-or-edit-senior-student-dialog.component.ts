@@ -18,7 +18,11 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
   }
 
 
+  closeDialog(wasAStudentAdded: boolean) {
+    this._matDialogRef.close(wasAStudentAdded);
+  }
+
   add() {
-    this._matDialogRef.close();
+    this.closeDialog(true);
   }
 }

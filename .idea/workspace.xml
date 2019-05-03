@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2efbfc4-bafb-4cd5-b348-c7db3cbd7700" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/guards/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/pipes/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/services/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/public/pipes/.gitkeep" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/modules/public/services/.gitkeep" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/public/components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,33 +21,37 @@
     <session id="1752517526">
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="html" value="2" />
+          <entry key="gitkeep" value="5" />
+          <entry key="html" value="3" />
+          <entry key="ico" value="1" />
           <entry key="json" value="2" />
-          <entry key="ts" value="4" />
+          <entry key="ts" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="2" />
+          <entry key="HTML" value="3" />
+          <entry key="Image" value="1" />
           <entry key="JSON" value="2" />
-          <entry key="TypeScript" value="4" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="TypeScript" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="2" />
+          <entry key="Angular2LanguageService" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="89" />
-          <entry key="ts" value="46" />
+          <entry key="ts" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="89" />
-          <entry key="TypeScript" value="46" />
+          <entry key="TypeScript" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -115,7 +126,6 @@
         <option value="$PROJECT_DIR$/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.html" />
-        <option value="$PROJECT_DIR$/src/app/modules/public/components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/shared/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component.scss" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/shared/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/shared/sidenavs/filter-grid-sidenav/filter-grid-sidenav.component.ts" />
@@ -123,6 +133,7 @@
         <option value="$PROJECT_DIR$/angular.json" />
         <option value="$PROJECT_DIR$/src/app/modules/shared/components/header/header.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" />
+        <option value="$PROJECT_DIR$/src/app/modules/public/components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" />
       </list>
     </option>
@@ -181,6 +192,22 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
@@ -269,7 +296,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4775000" />
+    <option name="totallyTimeSpent" value="5336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -283,7 +310,7 @@
   <component name="ToolWindowManager">
     <frame x="2552" y="-1" width="2576" height="1416" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25259793" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21542765" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -297,7 +324,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.5589198" />
       <window_info anchor="bottom" auto_hide="true" id="Version Control" order="7" weight="0.6849427" />
-      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="8" weight="0.7962357" />
+      <window_info active="true" anchor="bottom" auto_hide="true" id="Terminal" order="8" visible="true" weight="0.7962357" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" auto_hide="true" id="TypeScript" order="10" weight="0.5310966" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -386,20 +413,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -407,9 +424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -417,11 +431,63 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
           <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/favicon.ico">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/services/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/pipes/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/guards/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/shared/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="961">
+          <caret line="127" lean-forward="true" selection-start-line="127" selection-end-line="127" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/services/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/pipes/.gitkeep">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
