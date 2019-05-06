@@ -35,8 +35,6 @@ export class SignInComponent implements OnInit {
     if (!this.signInFormGroup.invalid) {
       console.log('form is valid');
     }
-
     this._router.navigate(['']);
   }
-
 }

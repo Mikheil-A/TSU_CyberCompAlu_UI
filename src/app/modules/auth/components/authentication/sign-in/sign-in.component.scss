@@ -1,5 +1,6 @@
 form {
-  background-color: #3b5f8c;
+  //background-color: #3b5f8c;
+  background-color: white;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
   border-radius: 8px;
   padding: 12px;
@@ -15,7 +16,7 @@ form {
     }
 
     p {
-      color: white;
+      color: #3b5f8c;
       font-size: 22px;
       font-weight: bold;
     }
@@ -30,14 +31,14 @@ form {
       width: 300px;
 
       mat-label {
-        color: white;
+        color: #3b5f8c;
       }
 
       input {
-        color: white;
+        color: #3b5f8c;
 
         &::placeholder {
-          color: white !important;
+          color: #3b5f8c !important;
         }
       }
     }
@@ -52,8 +53,8 @@ form {
     button {
       min-width: 220px;
       height: 40px;
-      color: #3b5f8c;
-      background: #EEE;
+      color: #eeeeee;
+      background-color: #3b5f8c;
       font-weight: 700;
       font-size: 16px;
       border-radius: 10px;

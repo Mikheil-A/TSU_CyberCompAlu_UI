@@ -15,25 +15,22 @@
     <app-header></app-header>
 
 
-    <div id="table-header">
-      <mat-form-field>
-        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
-      </mat-form-field>
+    <div id="table-container">
+      <div id="table-header">
+        <mat-form-field>
+          <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+        </mat-form-field>
 
-      <button mat-button mat-icon-button (click)="openFilterGridSidenav()">
-        <mat-icon>filter_list</mat-icon>
-      </button>
+        <button mat-button mat-icon-button (click)="openFilterGridSidenav()">
+          <mat-icon>filter_list</mat-icon>
+        </button>
 
-      <button mat-button mat-icon-button
-              matTooltip="კურსდამთავრებულის დამატება"
-              id="add-senior-student"
-              (click)="openAddOrEditSeniorStudentDialog()">
-        <mat-icon>add_circle</mat-icon>
-      </button>
-    </div>
-
-
-    <div class="mat-elevation-z8">
+        <button mat-button mat-icon-button
+                matTooltip="კურსდამთავრებულის დამატება"
+                (click)="openAddOrEditSeniorStudentDialog()">
+          <mat-icon>add_circle</mat-icon>
+        </button>
+      </div>
 
       <table mat-table [dataSource]="dataSource" matSort (matSortChange)="onTableSort($event)">
 

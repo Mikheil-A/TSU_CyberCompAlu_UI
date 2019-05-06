@@ -1,41 +1,3 @@
-#table-header {
-  display: flex;
-  flex-direction: row;
-  font-size: 14px;
-  padding: 12px 24px;
-
-  .mat-form-field {
-    flex-grow: 1;
-  }
-
-  #add-senior-student {
-    mat-icon {
-      font-size: 35px;
-    }
-  }
-}
-
-table {
-  width: 100%;
-
-  tr {
-    &:hover {
-      background-color: #f7f7fa;
-    }
-
-    td {
-      &.mat-column-isEmployed, &.mat-column-editAndDeleteIcons {
-        width: 100px;
-      }
-    }
-
-    #full-name {
-      color: #4688f1;
-      cursor: pointer;
-    }
-  }
-}
-
 mat-sidenav-container {
   ::ng-deep {
     .mat-drawer-backdrop.mat-drawer-shown {
@@ -46,6 +8,44 @@ mat-sidenav-container {
     .mat-drawer-backdrop {
       position: fixed;
       height: 115vh;
+    }
+  }
+
+  #table-container {
+    margin: 0 60px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
+
+    #table-header {
+      display: flex;
+      flex-direction: row;
+      font-size: 14px;
+      padding: 12px 24px;
+      box-shadow: 0 1px 0 #e0e0e0;
+
+      .mat-form-field {
+        flex-grow: 1;
+      }
+    }
+
+    table {
+      width: 100%;
+
+      tr {
+        &:hover {
+          background-color: #f7f7fa;
+        }
+
+        td {
+          &.mat-column-isEmployed, &.mat-column-editAndDeleteIcons {
+            width: 150px;
+          }
+        }
+
+        #full-name {
+          color: #4688f1;
+          cursor: pointer;
+        }
+      }
     }
   }
 }
