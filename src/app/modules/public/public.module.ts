@@ -1,15 +1,20 @@
 import {NgModule} from '@angular/core';
 
-import {AddOrEditSeniorStudentDialogComponent} from "./components/shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component";
-import {ConfirmSeniorStudentDeletionDialogComponent} from "./components/shared/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component";
+import {AddOrEditSeniorStudentDialogComponent} from "../admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component";
+import {ConfirmSeniorStudentDeletionDialogComponent} from "../admin/components/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component";
 
 import {PublicRoutingModule} from "./public-routing.module";
 import {SharedModule} from "../shared/shared.module";
 
 import {StudentsComponent} from "./components/students/students.component";
 
-import {StudentInfoSidenavComponent} from "./components/shared/sidenavs/student-info-sidenav/student-info-sidenav.component";
-import {FilterGridSidenavComponent} from "./components/shared/sidenavs/filter-grid-sidenav/filter-grid-sidenav.component";
+import {StudentInfoSidenavComponent} from "../admin/components/sidenavs/student-info-sidenav/student-info-sidenav.component";
+import {FilterGridSidenavComponent} from "./components/sidenavs/filter-grid-sidenav/filter-grid-sidenav.component";
+
+// mocks
+import {StudentsMock} from "./mocks/students.mock";
+
+// services
 
 
 
@@ -22,6 +27,12 @@ import {FilterGridSidenavComponent} from "./components/shared/sidenavs/filter-gr
 
     StudentInfoSidenavComponent,
     FilterGridSidenavComponent,
+  ],
+  providers: [
+    // mocks
+    StudentsMock
+
+    // services
   ],
   imports: [
     PublicRoutingModule,

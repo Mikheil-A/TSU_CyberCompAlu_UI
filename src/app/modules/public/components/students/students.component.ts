@@ -1,18 +1,10 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatDialog, MatPaginator, MatPaginatorIntl, MatSort, MatTableDataSource} from '@angular/material';
-import {AddOrEditSeniorStudentDialogComponent} from "../shared/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component";
-import {ConfirmSeniorStudentDeletionDialogComponent} from "../shared/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component";
+import {AddOrEditSeniorStudentDialogComponent} from "../../../admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component";
+import {ConfirmSeniorStudentDeletionDialogComponent} from "../../../admin/components/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component";
 import {NgxSpinnerService} from "ngx-spinner";
+import {StudentsMock} from "../../mocks/students.mock";
 
-
-
-const TESTDATA = [
-  {'isEmployed': true, 'fullName': 'test fullname', 'startDate': 'test startDate', 'endDate': 'test endDate'},
-  {'isEmployed': false, 'fullName': 'test fullname', 'startDate': 'test startDate', 'endDate': 'test endDate'},
-  {'isEmployed': true, 'fullName': 'test fullname', 'startDate': 'test startDate', 'endDate': 'test endDate'},
-  {'isEmployed': false, 'fullName': 'test fullname', 'startDate': 'test startDate', 'endDate': 'test endDate'},
-  {'isEmployed': false, 'fullName': 'test fullname', 'startDate': 'test startDate', 'endDate': 'test endDate'}
-];
 
 
 
@@ -39,12 +31,13 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
 
   constructor(private _matDialog: MatDialog,
-              private _ngxSpinnerService: NgxSpinnerService) {
+              private _ngxSpinnerService: NgxSpinnerService,
+              private _studentsMock: StudentsMock) {
     super();
 
     this._setPaginatorInGeorgian();
 
-    this.dataSource = new MatTableDataSource(TESTDATA);
+    this.dataSource = new MatTableDataSource(this._studentsMock.students);
   }
 
   ngOnInit() {
