@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2efbfc4-bafb-4cd5-b348-c7db3cbd7700" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/auth/ganivi.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,23 +19,27 @@
           <entry key="gitkeep" value="23" />
           <entry key="html" value="19" />
           <entry key="ico" value="1" />
+          <entry key="jpg" value="4" />
           <entry key="js" value="1" />
           <entry key="json" value="6" />
           <entry key="md" value="4" />
-          <entry key="scss" value="9" />
+          <entry key="png" value="1" />
+          <entry key="scss" value="10" />
           <entry key="ts" value="23" />
+          <entry key="xml" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="19" />
-          <entry key="Image" value="1" />
+          <entry key="Image" value="6" />
           <entry key="JSON" value="6" />
           <entry key="JavaScript" value="1" />
           <entry key="Markdown" value="4" />
           <entry key="PLAIN_TEXT" value="23" />
-          <entry key="SCSS" value="9" />
+          <entry key="SCSS" value="10" />
           <entry key="TypeScript" value="23" />
+          <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -46,7 +52,7 @@
           <entry key="html" value="138" />
           <entry key="json" value="4" />
           <entry key="md" value="183" />
-          <entry key="scss" value="121" />
+          <entry key="scss" value="179" />
           <entry key="ts" value="445" />
         </counts>
       </usages-collector>
@@ -55,7 +61,7 @@
           <entry key="HTML" value="138" />
           <entry key="JSON" value="4" />
           <entry key="Markdown" value="183" />
-          <entry key="SCSS" value="121" />
+          <entry key="SCSS" value="179" />
           <entry key="TypeScript" value="445" />
         </counts>
       </usages-collector>
@@ -141,11 +147,11 @@
         <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/sign-in/sign-in.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/sign-in/sign-in.component.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss" />
         <option value="$PROJECT_DIR$/src/app/modules/public/mocks/students.mock.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/public/public.module.ts" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss" />
       </list>
     </option>
   </component>
@@ -185,6 +191,51 @@
               <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
               <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -202,11 +253,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\My Folder\Projects\Personal\TSU_CyberCompAlu_UI\src\assets\images\auth" />
       <recent name="D:\My Folder\Projects\Personal\TSU_CyberCompAlu_UI\src\app\modules\public\components\sidenavs" />
       <recent name="D:\My Folder\Projects\Personal\TSU_CyberCompAlu_UI\src\app\modules\public\components" />
       <recent name="D:\My Folder\Projects\Personal\TSU_CyberCompAlu_UI\src\app\modules\admin\components\sidenavs" />
       <recent name="D:\My Folder\Projects\Personal\TSU_CyberCompAlu_UI\src\app\modules\admin\components" />
-      <recent name="D:\My Folder\Projects\Personal\TSU_CyberCompAlu_UI\src\app\modules\admin\components\dialogs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -260,7 +311,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23863000" />
+    <option name="totallyTimeSpent" value="24651000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -274,7 +325,7 @@
   <component name="ToolWindowManager">
     <frame x="2552" y="-1" width="2576" height="1416" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22981615" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22981615" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -286,10 +337,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.5589198" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49960032" weight="0.5589198" />
       <window_info anchor="bottom" auto_hide="true" id="Version Control" order="7" weight="0.6849427" />
-      <window_info active="true" anchor="bottom" auto_hide="true" id="Terminal" order="8" sideWeight="0.49960032" visible="true" weight="0.7454992" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5003997" side_tool="true" weight="0.7454992" />
+      <window_info anchor="bottom" auto_hide="true" id="Terminal" order="8" sideWeight="0.49960032" weight="0.7454992" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5003997" side_tool="true" weight="0.5589198" />
       <window_info anchor="bottom" auto_hide="true" id="TypeScript" order="10" weight="0.5310966" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -321,6 +372,20 @@
                   <UserGroup>
                     <option name="users">
                       <list>
+                        <option value="origin/my-branch" />
+                      </list>
+                    </option>
+                  </UserGroup>
+                  <UserGroup>
+                    <option name="users">
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </option>
+                  </UserGroup>
+                  <UserGroup>
+                    <option name="users">
+                      <list>
                         <option value="my-branch" />
                       </list>
                     </option>
@@ -332,7 +397,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="my-branch" />
+                        <option value="origin/my-branch" />
                       </list>
                     </value>
                   </entry>
@@ -463,13 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/shared/pipes/.gitkeep">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -580,6 +638,29 @@
             <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="736">
+          <caret line="136" column="33" lean-forward="true" selection-start-line="136" selection-start-column="33" selection-end-line="136" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/tsu-logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/auth/meore-korpusi_large.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/images/auth/ganivi.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
