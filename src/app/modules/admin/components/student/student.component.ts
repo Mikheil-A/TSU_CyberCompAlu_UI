@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {NgxSpinnerService} from "ngx-spinner";
+import {StudentsService} from "../../../public/services/students.service";
 
 
 
@@ -14,8 +15,9 @@ export class StudentComponent implements OnInit {
 
 
   constructor(private _activatedRoute: ActivatedRoute,
-              private _ngxSpinnerService: NgxSpinnerService) {
-    this._ngxSpinnerService.show();
+              private _ngxSpinnerService: NgxSpinnerService,
+              private _studentsService: StudentsService) {
+    // this._ngxSpinnerService.show();
     this._getStudentPersonalId();
   }
 
@@ -31,8 +33,11 @@ export class StudentComponent implements OnInit {
   private _fetchStudentInfo(pid: string) {
     console.log(pid);
 
-    setTimeout(() => {
-      this._ngxSpinnerService.hide();
-    }, 1000);
+    this._studentsService.getStudent(pid).subscribe((res) => {
+      console.log(res);
+    }, () => {
+    }, () => {
+      // this._ngxSpinnerService.hide();
+    });
   }
 }

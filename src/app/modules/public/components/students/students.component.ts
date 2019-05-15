@@ -4,6 +4,7 @@ import {AddOrEditSeniorStudentDialogComponent} from "../../../admin/components/d
 import {ConfirmSeniorStudentDeletionDialogComponent} from "../../../admin/components/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component";
 import {NgxSpinnerService} from "ngx-spinner";
 import {StudentsMock} from "../../mocks/students.mock";
+import {StudentsService} from "../../services/students.service";
 
 
 
@@ -24,6 +25,10 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
   displayedColumns: string[] = ['isEmployed', 'fullName', 'startDate', 'endDate', 'editAndDeleteIcons'];
   dataSource: MatTableDataSource<any>;
+  private _gridFilterData: object = {
+    page: 1,
+    limit: 10
+  };
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -31,7 +36,8 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
   constructor(private _matDialog: MatDialog,
               private _ngxSpinnerService: NgxSpinnerService,
-              private _studentsMock: StudentsMock) {
+              private _studentsMock: StudentsMock,
+              private _studentsService: StudentsService) {
     super();
 
     this._setPaginatorInGeorgian();
@@ -43,7 +49,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
 
-    this._fetchGridData();
+    // this._fetchGridData(this._gridFilterData);
   }
 
 
@@ -54,14 +60,15 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     this.previousPageLabel = 'წინა გვერდი';
   }
 
-  private _fetchGridData(filterByData?: object) {
-    this._ngxSpinnerService.show();
+  private _fetchGridData(filterByData: object) {
+    // this._ngxSpinnerService.show();
 
-    console.log(filterByData);
-
-    setTimeout(() => {
-      this._ngxSpinnerService.hide();
-    }, 1000);
+    this._studentsService.search(filterByData).subscribe((res) => {
+      // this.dataSource = res;
+    }, () => {
+    }, () => {
+      // this._ngxSpinnerService.hide();
+    });
   }
 
 
@@ -84,7 +91,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this._fetchGridData();
+        this._fetchGridData(this._gridFilterData);
       }
     })
   }
@@ -94,7 +101,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this._fetchGridData();
+        this._fetchGridData(this._gridFilterData);
       }
     })
   }
@@ -110,10 +117,12 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   }
 
   onPagingChange(e) {
-    this._fetchGridData(e);
+    this._gridFilterData['page'] = e.pageIndex;
+    this._gridFilterData['limit'] = e.pageSize;
+    // this._fetchGridData(this._gridFilterData);
   }
 
   onTableSort(e) {
-    this._fetchGridData(e);
+    // this._fetchGridData(this._gridFilterData);
   }
 }

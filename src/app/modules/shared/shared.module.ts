@@ -3,6 +3,8 @@ import {CommonModule} from '@angular/common';
 
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import {BrowserModule} from '@angular/platform-browser';
+import {HttpClientModule} from '@angular/common/http';
 
 
 import {HeaderComponent} from "./components/header/header.component";
@@ -22,6 +24,8 @@ import {NgxSpinnerModule} from "ngx-spinner";
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
+    BrowserModule,
+    HttpClientModule,
     MatModule,
     NgxSpinnerModule
   ],
@@ -29,6 +33,8 @@ import {NgxSpinnerModule} from "ngx-spinner";
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
+    BrowserModule,
+    HttpClientModule,
     MatModule,
     NgxSpinnerModule,
 

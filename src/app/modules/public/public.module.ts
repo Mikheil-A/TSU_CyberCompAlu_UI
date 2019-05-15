@@ -15,6 +15,7 @@ import {FilterGridSidenavComponent} from "./components/sidenavs/filter-grid-side
 import {StudentsMock} from "./mocks/students.mock";
 
 // services
+import {StudentsService} from "./services/students.service";
 
 
 
@@ -30,9 +31,10 @@ import {StudentsMock} from "./mocks/students.mock";
   ],
   providers: [
     // mocks
-    StudentsMock
+    StudentsMock,
 
     // services
+    StudentsService
   ],
   imports: [
     PublicRoutingModule,

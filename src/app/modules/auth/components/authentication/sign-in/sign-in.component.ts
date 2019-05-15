@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
+import {AuthService} from "../../../services/auth.service";
 
 
 
@@ -15,7 +16,8 @@ export class SignInComponent implements OnInit {
   isUsernameOrPasswordIsIncorrectMsgDisplayed: boolean = false;
 
 
-  constructor(private _router: Router) {
+  constructor(private _router: Router,
+              private _authService: AuthService) {
   }
 
 
@@ -26,15 +28,23 @@ export class SignInComponent implements OnInit {
 
   private _initializeForm() {
     this.signInFormGroup = new FormGroup({
-      'username': new FormControl(null, Validators.required),
+      'email': new FormControl(null, [Validators.required, Validators.email]),
       'password': new FormControl(null, Validators.required)
     });
   }
 
   submit() {
     if (!this.signInFormGroup.invalid) {
-      console.log('form is valid');
+      const requestData = {
+        email: this.signInFormGroup.value.email,
+        password: this.signInFormGroup.value.password
+      };
+
+      this._authService.login(requestData).subscribe((res) => {
+        console.log(res);
+        this._authService.saveUserSessionData(res['token']);
+        this._router.navigate(['']);
+      });
     }
-    this._router.navigate(['']);
   }
 }
