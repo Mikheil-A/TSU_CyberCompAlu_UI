@@ -40,10 +40,11 @@ export class SignInComponent implements OnInit {
         password: this.signInFormGroup.value.password
       };
 
-      this._authService.login(requestData).subscribe((res) => {
-        console.log(res);
-        this._authService.saveUserSessionData(res['token']);
-        this._router.navigate(['']);
+      this._authService.login(requestData).subscribe(res => {
+        console.log('res>>>>>>>>', res);
+        if (res) {
+          this._router.navigate(['']);
+        }
       });
     }
   }

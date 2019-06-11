@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {Component} from '@angular/core';
+import {AuthService} from "../../../auth/services/auth.service";
 
 
 
@@ -8,18 +8,15 @@ import {Router} from "@angular/router";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  username: string = 'test';
+export class HeaderComponent {
+  username: string = 'test username';
 
 
-  constructor(private _router: Router) {
-  }
-
-  ngOnInit() {
+  constructor(private _authService: AuthService) {
   }
 
 
   logout() {
-    this._router.navigate(['auth']);
+    this._authService.logout();
   }
 }
