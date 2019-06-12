@@ -21,6 +21,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   @ViewChild('sidenav') private _sidenav;
 
   sidenavId: number = null;
+  clickedStudentPid: string;
 
 
   displayedColumns: string[] = ['isEmployed', 'fullName', 'startDate', 'endDate', 'editAndDeleteIcons'];
@@ -80,8 +81,9 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     }
   }
 
-  openStudentInfoSideNav() {
+  openStudentInfoSideNav(pid: string) {
     this.sidenavId = 1;
+    this.clickedStudentPid = pid;
     this._sidenav.open();
   }
 
@@ -123,6 +125,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   }
 
   onTableSort(e) {
+    console.log(e);
     // this._fetchGridData(this._gridFilterData);
   }
 }

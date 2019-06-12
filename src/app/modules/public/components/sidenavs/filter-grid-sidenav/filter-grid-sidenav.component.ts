@@ -1,4 +1,5 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
 
 
 
@@ -10,15 +11,30 @@ import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 export class FilterGridSidenavComponent implements OnInit {
   @Output() onFilter = new EventEmitter<object>();
 
+  filterDataFormGroup: FormGroup;
+
 
   constructor() {
   }
 
   ngOnInit() {
+    this._initializeForm();
+  }
+
+
+  private _initializeForm() {
+    this.filterDataFormGroup = new FormGroup({
+      'startDate': new FormControl(null),
+      'endDate': new FormControl(null),
+      'isEmployed': new FormControl(null),
+    });
   }
 
 
   load() {
-    this.onFilter.emit({});
+    if (this.filterDataFormGroup.touched && this.filterDataFormGroup.valid) {
+      console.log(this.filterDataFormGroup.value);
+      this.onFilter.emit({});
+    }
   }
 }

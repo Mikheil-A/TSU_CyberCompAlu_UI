@@ -11,6 +11,11 @@ import {MatSortModule} from "@angular/material/sort";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatIconModule} from "@angular/material/icon";
 import {MatDialogModule} from "@angular/material/dialog";
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from "@angular/material";
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
+import {MAT_DATE_LOCALE} from "@angular/material/core";
 
 
 
@@ -27,9 +32,12 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatSortModule,
     MatSidenavModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCheckboxModule
   ],
-  exports:[
+  exports: [
     BrowserAnimationsModule,
     MatButtonModule,
     MatTooltipModule,
@@ -40,7 +48,13 @@ import {MatDialogModule} from "@angular/material/dialog";
     MatSortModule,
     MatSidenavModule,
     MatIconModule,
-    MatDialogModule
+    MatDialogModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCheckboxModule
+  ],
+  providers: [
+    {provide: MAT_DATE_LOCALE, useValue: 'en-GB'}
   ]
 })
 export class MatModule {

@@ -14,6 +14,10 @@ export class StudentsService {
     return this._httpClient.get(`/api/users/list?page=${data['page']}&limit=${data['limit']}`);
   }
 
+  add(data: object) {
+    return this._httpClient.post('/api/users', data);
+  }
+
   delete(studentId: number) {
     return this._httpClient.delete(`/api/users/${studentId}`);
   }

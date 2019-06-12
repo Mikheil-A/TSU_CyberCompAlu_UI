@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
+import {StudentsService} from "../../../../public/services/students.service";
 
 
 
@@ -10,7 +11,8 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 })
 export class ConfirmSeniorStudentDeletionDialogComponent implements OnInit {
 
-  constructor(private _matDialogRef: MatDialogRef<ConfirmSeniorStudentDeletionDialogComponent>,
+  constructor(private _studentsService: StudentsService,
+              private _matDialogRef: MatDialogRef<ConfirmSeniorStudentDeletionDialogComponent>,
               @Inject(MAT_DIALOG_DATA) private _matDialogData: any) {
   }
 
@@ -24,6 +26,9 @@ export class ConfirmSeniorStudentDeletionDialogComponent implements OnInit {
   }
 
   delete() {
-    this.closeDialog(true);
+    this._studentsService.delete(4).subscribe((res) => {
+      console.log(res);
+      this.closeDialog(true);
+    });
   }
 }

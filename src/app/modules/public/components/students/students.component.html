@@ -4,7 +4,7 @@
                [fixedInViewport]="true"
                [autoFocus]="false" [disableClose]="false">
 
-    <app-student-info-sidenav *ngIf="sidenavId === 1"></app-student-info-sidenav>
+    <app-student-info-sidenav *ngIf="sidenavId === 1" [studentPid]="clickedStudentPid"></app-student-info-sidenav>
 
     <app-filter-grid-sidenav *ngIf="sidenavId === 2" (onFilter)="filter($event)"></app-filter-grid-sidenav>
 
@@ -44,7 +44,7 @@
         <ng-container matColumnDef="fullName">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>სახელი, გვარი</th>
           <td mat-cell *matCellDef="let row">
-            <span id="full-name" (click)="openStudentInfoSideNav()">{{row.fullName}}</span>
+            <span id="full-name" (click)="openStudentInfoSideNav(row.id)">{{row.fullName}}</span>
           </td>
         </ng-container>
 

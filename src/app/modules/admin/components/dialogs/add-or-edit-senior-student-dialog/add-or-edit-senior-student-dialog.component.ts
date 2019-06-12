@@ -1,5 +1,6 @@
 import {Component, Inject, OnInit} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
+import {StudentsService} from "../../../../public/services/students.service";
 
 
 
@@ -10,7 +11,8 @@ import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
 })
 export class AddOrEditSeniorStudentDialogComponent implements OnInit {
 
-  constructor(private _matDialogRef: MatDialogRef<AddOrEditSeniorStudentDialogComponent>,
+  constructor(private _studentsService: StudentsService,
+              private _matDialogRef: MatDialogRef<AddOrEditSeniorStudentDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any) {
   }
 
@@ -23,6 +25,8 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
   }
 
   add() {
-    this.closeDialog(true);
+    this._studentsService.add({}).subscribe(() => {
+      this.closeDialog(true);
+    });
   }
 }
