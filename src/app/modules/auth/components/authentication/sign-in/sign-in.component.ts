@@ -41,9 +41,13 @@ export class SignInComponent implements OnInit {
       };
 
       this._authService.login(requestData).subscribe(res => {
-        console.log('res>>>>>>>>', res);
         if (res) {
+          this.isUsernameOrPasswordIsIncorrectMsgDisplayed = false;
           this._router.navigate(['']);
+        }
+      }, (err) => {
+        if (err['error'] === 'unauthorized') {
+          this.isUsernameOrPasswordIsIncorrectMsgDisplayed = true;
         }
       });
     }
