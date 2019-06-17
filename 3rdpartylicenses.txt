@@ -87,7 +87,11 @@ THE SOFTWARE.
 
 @angular/material/button
 
+@angular/material/checkbox
+
 @angular/material/core
+
+@angular/material/datepicker
 
 @angular/material/dialog
 
