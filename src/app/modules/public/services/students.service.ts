@@ -11,10 +11,10 @@ export class StudentsService {
 
 
   search(data: object) {
-    return this._httpClient.get(`/api/users/list?page=${data['page']}&limit=${data['limit']}`);
+    return this._httpClient.post('/api/users/list', data);
   }
 
-  add(data: object) {
+  addOrUpdate(data: object) {
     return this._httpClient.post('/api/users', data);
   }
 

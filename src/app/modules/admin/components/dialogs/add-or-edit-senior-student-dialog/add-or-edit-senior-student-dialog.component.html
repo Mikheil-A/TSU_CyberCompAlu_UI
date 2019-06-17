@@ -1,7 +1,27 @@
-<p>
-  add-senior-student-dialog works!
-</p>
+<div id="dialog-container">
+  <h1>სტუდენტის {{addOrEditTitle}}</h1>
 
-<button mat-button (click)="add()">
-  დამატება
-</button>
+  <form [formGroup]="formGroup" (ngSubmit)="save()">
+
+    <mat-form-field appearance="outline">
+      <mat-label>სახელი</mat-label>
+      <input type="text" formControlName="firstName" matInput placeholder="სახელი" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>გვარი</mat-label>
+      <input type="text" formControlName="lastName" matInput placeholder="გვარი" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>მისამართი</mat-label>
+      <input type="text" formControlName="address" matInput placeholder="მისამართი" required>
+    </mat-form-field>
+
+    <button mat-button type="submit"
+            class="big-button-style"
+            [ngStyle]="{'cursor': formGroup.invalid ? 'not-allowed' : 'pointer'}">შენახვა
+    </button>
+
+  </form>
+</div>

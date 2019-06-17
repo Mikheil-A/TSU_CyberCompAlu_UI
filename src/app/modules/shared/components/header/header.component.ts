@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../../auth/services/auth.service";
 
 
@@ -8,11 +8,15 @@ import {AuthService} from "../../../auth/services/auth.service";
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
   username: string = 'test username';
 
 
   constructor(private _authService: AuthService) {
+  }
+
+  ngOnInit() {
+    // TODO get username from local storage
   }
 
 

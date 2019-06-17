@@ -4,5 +4,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #E5E6EE;
+  background-color: #e5e6ee;
+}
+
+.big-button-style {
+  color: #eeeeee;
+  background-color: #3b5f8c;
+  height: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
 }

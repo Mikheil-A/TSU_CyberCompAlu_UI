@@ -26,9 +26,21 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
   displayedColumns: string[] = ['isEmployed', 'fullName', 'startDate', 'endDate', 'editAndDeleteIcons'];
   dataSource: MatTableDataSource<any>;
+
+  // /users/list-ზე ასეთ რაღაცას გამოვატან
   private _gridFilterData: object = {
-    page: 1,
-    limit: 10
+    paging: {
+      page: 1,
+      limit: 10,
+    },
+    sorting: { // ცხრილის სორტირება
+      property: 'id',
+      direction: 'acs' // desc, ზრდადობა/კლებადომა ხო უნდა, order რო გიწერია ეს არის
+    },
+    isEmployed: true, // false
+    startDate: 42421434123414, // მილიწამებში უნის დაწყება
+    endDate: 42421434123414, // მილიწამებში უნის დამთავრება
+    input: 'rame string-i fullname-shi ro moidzebneba' // key არ უნდა, ამას რო გამოვატან სახელი-გვარი ში მოძებნე
   };
 
   @ViewChild(MatPaginator) paginator: MatPaginator;

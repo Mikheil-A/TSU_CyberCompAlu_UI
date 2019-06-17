@@ -32,6 +32,7 @@ export class AuthService {
     return this._httpClient.post('/api/auth/login', requestData, options).pipe(
       map(res => {
         if (res['status'] === 200) {
+          // TODO username????
           this._saveUserSessionData(res['body'].token, res['body']['user_id']);
           return res['body'];
         }
