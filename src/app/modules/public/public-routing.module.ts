@@ -2,12 +2,12 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 import {StudentsComponent} from "./components/students/students.component";
+import {AuthGuard} from "../auth/guards/auth.guard";
 
 
 
 const routes: Routes = [
-  {path: '', redirectTo: 'students', pathMatch: 'full'},
-  {path: 'students', component: StudentsComponent}
+  {path: 'students', component: StudentsComponent, canActivateChild: [AuthGuard]}
 ];
 
 

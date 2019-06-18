@@ -43,7 +43,7 @@ export class SignInComponent implements OnInit {
       this._authService.login(requestData).subscribe(res => {
         if (res) {
           this.isUsernameOrPasswordIsIncorrectMsgDisplayed = false;
-          this._router.navigate(['']);
+          this._router.navigate(['students']);
         }
       }, (err) => {
         if (err['error'] === 'unauthorized') {

@@ -10,6 +10,9 @@ import {SignInComponent} from "./components/authentication/sign-in/sign-in.compo
 // services
 import {AuthService} from "./services/auth.service";
 
+// guards
+import {AuthGuard} from "./guards/auth.guard";
+
 
 
 @NgModule({
@@ -24,7 +27,13 @@ import {AuthService} from "./services/auth.service";
   ],
   providers: [
     // services
-    AuthService
+    AuthService,
+
+    // guards
+    AuthGuard
+  ],
+  exports: [
+    // AuthGuard
   ]
 })
 export class AuthModule {

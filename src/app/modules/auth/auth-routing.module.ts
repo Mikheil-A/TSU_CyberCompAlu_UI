@@ -4,13 +4,16 @@ import {Routes, RouterModule} from '@angular/router';
 import {AuthenticationComponent} from "./components/authentication/authentication.component";
 import {SignInComponent} from "./components/authentication/sign-in/sign-in.component";
 
+import {AuthGuard} from "./guards/auth.guard";
+
 
 
 const routes: Routes = [
+  {path: '', pathMatch: 'full', redirectTo: 'auth'},
   {
-    path: 'auth', component: AuthenticationComponent,
+    path: 'auth', component: AuthenticationComponent, canActivateChild: [AuthGuard],
     children: [
-      {path: '', redirectTo: 'sign-in', pathMatch: 'full'},
+      {path: '', pathMatch: 'full', redirectTo: 'sign-in'},
       {path: 'sign-in', component: SignInComponent}
     ]
   }

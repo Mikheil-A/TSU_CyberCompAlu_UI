@@ -60,10 +60,16 @@ export class AuthService {
     if (token && userId) {
       localStorage.setItem('access_token', token);
       localStorage.setItem('user_id', userId.toString());
+      localStorage.setItem('username', 'test username');
     }
   }
 
   private _clearUserSessionData() {
     localStorage.clear();
   }
+
+  get isLoggedIn(): boolean {
+    return localStorage.getItem('access_token') ? true : false;
+  }
+
 }

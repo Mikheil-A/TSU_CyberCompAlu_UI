@@ -9,14 +9,16 @@ import {AuthService} from "../../../auth/services/auth.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  username: string = 'test username';
+  username: string = '';
 
 
   constructor(private _authService: AuthService) {
   }
 
   ngOnInit() {
-    // TODO get username from local storage
+    if (this._authService.isLoggedIn) {
+      this.username = localStorage.getItem('username');
+    }
   }
 
 

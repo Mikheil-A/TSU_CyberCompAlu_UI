@@ -27,7 +27,7 @@ import {StudentsService} from "./services/students.service";
     ConfirmSeniorStudentDeletionDialogComponent,
 
     StudentInfoSidenavComponent,
-    FilterGridSidenavComponent,
+    FilterGridSidenavComponent
   ],
   providers: [
     // mocks
