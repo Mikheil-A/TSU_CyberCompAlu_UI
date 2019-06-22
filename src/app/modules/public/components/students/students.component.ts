@@ -21,22 +21,18 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   @ViewChild('sidenav') private _sidenav;
 
   sidenavId: number = null;
-  clickedStudentPid: string;
+  clickedStudentId: string;
 
 
-  displayedColumns: string[] = ['isEmployed', 'fullName', 'startDate', 'endDate', 'editAndDeleteIcons'];
+  displayedColumns: string[] = ['employed', 'full_name', 'startDate', 'graduate_date', 'editAndDeleteIcons'];
   dataSource: MatTableDataSource<any>;
 
   // /users/list-ზე ასეთ რაღაცას გამოვატან
   private _gridFilterData: object = {
-    paging: {
-      page: 1,
-      limit: 10,
-    },
-    sorting: { // ცხრილის სორტირება
-      property: 'id',
-      direction: 'acs' // desc, ზრდადობა/კლებადომა ხო უნდა, order რო გიწერია ეს არის
-    },
+    page: 1,
+    limit: 10,
+    property: 'created_at',
+    direction: 'acs', // desc, ზრდადობა/კლებადომა ხო უნდა, order რო გიწერია ეს არის
     isEmployed: true, // false
     startDate: 42421434123414, // მილიწამებში უნის დაწყება
     endDate: 42421434123414, // მილიწამებში უნის დამთავრება
@@ -55,14 +51,15 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
     this._setPaginatorInGeorgian();
 
-    this.dataSource = new MatTableDataSource(this._studentsMock.students);
+    // this.dataSource = new MatTableDataSource(this._studentsMock.students);
   }
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    // this.dataSource.paginator = this.paginator;
+    // this.dataSource.sort = this.sort;
 
     // this._fetchGridData(this._gridFilterData);
+    this._fetchGridData({});
   }
 
 
@@ -74,13 +71,13 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   }
 
   private _fetchGridData(filterByData: object) {
-    // this._ngxSpinnerService.show();
+    this._ngxSpinnerService.show();
 
     this._studentsService.search(filterByData).subscribe((res) => {
-      // this.dataSource = res;
+      this.dataSource = new MatTableDataSource(res['data']);
     }, () => {
     }, () => {
-      // this._ngxSpinnerService.hide();
+      this._ngxSpinnerService.hide();
     });
   }
 
@@ -93,9 +90,9 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     }
   }
 
-  openStudentInfoSideNav(pid: string) {
+  openStudentInfoSideNav(id: string) {
     this.sidenavId = 1;
-    this.clickedStudentPid = pid;
+    this.clickedStudentId = id;
     this._sidenav.open();
   }
 
@@ -110,8 +107,10 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     })
   }
 
-  openConfirmSeniorStudentDeletionDialog() {
-    const dialogRef = this._matDialog.open(ConfirmSeniorStudentDeletionDialogComponent);
+  openConfirmSeniorStudentDeletionDialog(studentId: number) {
+    const dialogRef = this._matDialog.open(ConfirmSeniorStudentDeletionDialogComponent, {
+      'data': studentId
+    });
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {

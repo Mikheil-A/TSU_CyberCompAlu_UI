@@ -17,9 +17,9 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
 
   formGroup: FormGroup;
   private _inputFieldsInitialValues = { // this is default for dialog adding mode
-    'firstName': null,
-    'lastName': null,
-    'address': null
+    'name': null,
+    'last_name': null,
+    'email': null
   };
 
   constructor(private _studentsService: StudentsService,
@@ -30,7 +30,7 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
 
   ngOnInit() {
     if (this._clickedStudentData) {
-      this._setDialogToEditingMode();
+      // this._setDialogToEditingMode();
     }
     this._initializeForm();
   }
@@ -40,16 +40,19 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
     this.addOrEditTitle = 'ჩასწორება';
 
     // Setting clicked record values to input fields
-    this._inputFieldsInitialValues.firstName = this._clickedStudentData.firstName;
-    this._inputFieldsInitialValues.lastName = this._clickedStudentData.lastName;
-    this._inputFieldsInitialValues.address = this._clickedStudentData.address;
+    // this._inputFieldsInitialValues.name = this._clickedStudentData.firstName;
+    // this._inputFieldsInitialValues.lastName = this._clickedStudentData.lastName;
+    // this._inputFieldsInitialValues.address = this._clickedStudentData.address;
   }
 
   private _initializeForm() {
     this.formGroup = new FormGroup({
-      'firstName': new FormControl(this._inputFieldsInitialValues.firstName, Validators.required),
-      'lastName': new FormControl(this._inputFieldsInitialValues.lastName, Validators.required),
-      'address': new FormControl(this._inputFieldsInitialValues.address, Validators.required)
+      // 'name': new FormControl(this._inputFieldsInitialValues.name, Validators.required),
+      // 'last_name': new FormControl(this._inputFieldsInitialValues.last_name, Validators.required),
+      // 'email': new FormControl(this._inputFieldsInitialValues.email, Validators.required),
+      // 'birth_date': new FormControl(this._inputFieldsInitialValues.birth_date, Validators.required),
+      // 'graduate_date': new FormControl(this._inputFieldsInitialValues.graduate_date, Validators.required),
+      // 'profile_id': new FormControl(this._inputFieldsInitialValues.profile_id, Validators.required), // 1 admin, 2 - student
     });
   }
 
@@ -58,10 +61,30 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
   }
 
   save() {
+    const tempRequestData = {
+      'username': 'testusernae',
+      'name': 'testname',
+      'last_name': 'test lat name',
+      'email': 'testafwfwfwemail@gmail.com',
+      'birth_date': new Date(),
+      'apply_date': new Date(),
+      'graduate_date': new Date(),
+      'profile_id': 2,
+      'employed': true
+    };
+    this._studentsService.addOrUpdate({
+      "email":"dunkman032@gmail.com",
+      "name": "zuri123",
+      "last_name": "123",
+      "username":"zuria12",
+      "birth_date": "25-01-1997",
+      "profile_id": 1
+    }).subscribe((res) => {
+      console.log('damateba', res);
+      this.closeDialog(true);
+    });
+
     if (!this.formGroup.invalid) {
-      this._studentsService.addOrUpdate({}).subscribe(() => {
-        this.closeDialog(true);
-      });
     }
   }
 }

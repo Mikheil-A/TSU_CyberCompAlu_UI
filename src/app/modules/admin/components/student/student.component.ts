@@ -11,33 +11,31 @@ import {StudentsService} from "../../../public/services/students.service";
   styleUrls: ['./student.component.scss']
 })
 export class StudentComponent implements OnInit {
-  private _studentPersonalId: string;
+  private _studentId: string;
 
 
   constructor(private _activatedRoute: ActivatedRoute,
               private _ngxSpinnerService: NgxSpinnerService,
               private _studentsService: StudentsService) {
-    // this._ngxSpinnerService.show();
-    this._getStudentPersonalId();
+    this._ngxSpinnerService.show();
+    this._getStudentId();
   }
 
   ngOnInit() {
-    this._fetchStudentInfo(this._studentPersonalId);
+    this._fetchStudentInfo(this._studentId);
   }
 
 
-  private _getStudentPersonalId() {
-    this._studentPersonalId = this._activatedRoute.snapshot.paramMap.get('pid')
+  private _getStudentId() {
+    this._studentId = this._activatedRoute.snapshot.paramMap.get('id')
   }
 
-  private _fetchStudentInfo(pid: string) {
-    console.log(pid);
-
-    this._studentsService.getStudent(pid).subscribe((res) => {
+  private _fetchStudentInfo(id: string) {
+    this._studentsService.getStudent(id).subscribe((res) => {
       console.log(res);
     }, () => {
     }, () => {
-      // this._ngxSpinnerService.hide();
+      this._ngxSpinnerService.hide();
     });
   }
 }

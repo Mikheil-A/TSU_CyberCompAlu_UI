@@ -13,11 +13,10 @@ export class ConfirmSeniorStudentDeletionDialogComponent implements OnInit {
 
   constructor(private _studentsService: StudentsService,
               private _matDialogRef: MatDialogRef<ConfirmSeniorStudentDeletionDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) private _matDialogData: any) {
+              @Inject(MAT_DIALOG_DATA) private _receivedData: any) {
   }
 
   ngOnInit() {
-    console.log(this._matDialogData);
   }
 
 
@@ -26,7 +25,7 @@ export class ConfirmSeniorStudentDeletionDialogComponent implements OnInit {
   }
 
   delete() {
-    this._studentsService.delete(4).subscribe((res) => {
+    this._studentsService.delete(this._receivedData).subscribe((res) => {
       console.log(res);
       this.closeDialog(true);
     });

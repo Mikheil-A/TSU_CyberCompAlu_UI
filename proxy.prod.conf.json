@@ -1,6 +1,6 @@
 {
   "/api": {
-    "target": "https://shielded-ravine-48987.herokuapp.com",
+    "target": "https://polar-wave-32925.herokuapp.com",
     "secure": false,
     "pathRewrite": {
       "^/api": ""

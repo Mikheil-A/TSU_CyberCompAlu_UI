@@ -22,7 +22,7 @@ export class StudentsService {
     return this._httpClient.delete(`/api/users/${studentId}`);
   }
 
-  getStudent(studentPersonalId: string) {
-    return this._httpClient.get(`/api/users/${studentPersonalId}`);
+  getStudent(studentId: string) {
+    return this._httpClient.get(`/api/users/${studentId}/edit`);
   }
 }
