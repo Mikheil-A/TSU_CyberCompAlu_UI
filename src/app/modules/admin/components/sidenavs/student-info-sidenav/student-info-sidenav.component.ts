@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {StudentsService} from "../../../../public/services/students.service";
 
 
+
 @Component({
   selector: 'app-student-info-sidenav',
   templateUrl: './student-info-sidenav.component.html',
@@ -21,10 +22,9 @@ export class StudentInfoSidenavComponent implements OnInit {
 
 
   private _fetchStudent() {
-    console.log('>>>>>>>>', this.studentId);
     this._studentsService.getStudent(this.studentId).subscribe(res => {
-      console.log(res);
-      this.studentInfo = res;
+      this.studentInfo = res['data'];
+      console.log(this.studentInfo);
     });
   }
 }

@@ -14,6 +14,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from "@angular/material";
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatSelectModule} from '@angular/material/select';
 
 import {MAT_DATE_LOCALE} from "@angular/material/core";
 
@@ -35,7 +36,8 @@ import {MAT_DATE_LOCALE} from "@angular/material/core";
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -51,7 +53,8 @@ import {MAT_DATE_LOCALE} from "@angular/material/core";
     MatDialogModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatSelectModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'en-GB'}

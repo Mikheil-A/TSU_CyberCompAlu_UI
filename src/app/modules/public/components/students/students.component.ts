@@ -27,16 +27,21 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   displayedColumns: string[] = ['employed', 'full_name', 'startDate', 'graduate_date', 'editAndDeleteIcons'];
   dataSource: MatTableDataSource<any>;
 
-  // /users/list-ზე ასეთ რაღაცას გამოვატან
   private _gridFilterData: object = {
+    // paginator
     page: 1,
     limit: 10,
+
+    // sorting
     property: 'created_at',
-    direction: 'acs', // desc, ზრდადობა/კლებადომა ხო უნდა, order რო გიწერია ეს არის
-    isEmployed: true, // false
-    startDate: 42421434123414, // მილიწამებში უნის დაწყება
-    endDate: 42421434123414, // მილიწამებში უნის დამთავრება
-    input: 'rame string-i fullname-shi ro moidzebneba' // key არ უნდა, ამას რო გამოვატან სახელი-გვარი ში მოძებნე
+    direction: 'acs', // desc
+
+    isEmployed: null, // true/false
+
+    startDate: null, // milliseconds
+    endDate: null, // milliseconds
+
+    input: '' // string, searches in full name
   };
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -55,9 +60,6 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   }
 
   ngOnInit() {
-    // this.dataSource.paginator = this.paginator;
-    // this.dataSource.sort = this.sort;
-
     // this._fetchGridData(this._gridFilterData);
     this._fetchGridData({});
   }
@@ -75,6 +77,9 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
     this._studentsService.search(filterByData).subscribe((res) => {
       this.dataSource = new MatTableDataSource(res['data']);
+
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
     }, () => {
     }, () => {
       this._ngxSpinnerService.hide();
@@ -97,12 +102,14 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   }
 
 
-  openAddOrEditSeniorStudentDialog() {
-    const dialogRef = this._matDialog.open(AddOrEditSeniorStudentDialogComponent);
-
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
-        this._fetchGridData(this._gridFilterData);
+  openAddOrEditSeniorStudentDialog(clickedRecordData: object = null) {
+    const dialogRef = this._matDialog.open(AddOrEditSeniorStudentDialogComponent, {
+      'data': clickedRecordData
+    });
+    dialogRef.afterClosed().subscribe((isAdded: boolean) => {
+      if (isAdded) {
+        // this._fetchGridData(this._gridFilterData);
+        this._fetchGridData({});
       }
     })
   }
@@ -112,10 +119,16 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
       'data': studentId
     });
 
-    dialogRef.afterClosed().subscribe((result) => {
-      if (result) {
-        this._fetchGridData(this._gridFilterData);
-      }
+    const deleteSubscription = dialogRef.componentInstance.onDelete.subscribe(() => {
+      // this._fetchGridData(this._gridFilterData);
+      this._fetchGridData({});
+    });
+
+    dialogRef.afterClosed().subscribe((isDeleted: boolean) => {
+      // if (isDeleted) {
+      //   this._fetchGridData(this._gridFilterData);
+      // }
+      deleteSubscription.unsubscribe();
     })
   }
 
@@ -124,19 +137,29 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     this._sidenav.open();
   }
 
-  filter(e) {
+  reFetchFilteredGrid(e) {
     this._sidenav.close();
+
+    this._gridFilterData['isEmployed'] = e.isEmployed;
+    this._gridFilterData['startDate'] = e.startDate;
+    this._gridFilterData['endDate'] = e.endDate;
+
     this._fetchGridData(e);
   }
 
   onPagingChange(e) {
+    console.log(e);
     this._gridFilterData['page'] = e.pageIndex;
     this._gridFilterData['limit'] = e.pageSize;
-    // this._fetchGridData(this._gridFilterData);
+
+    this._fetchGridData(this._gridFilterData); // FIXME backend not working
   }
 
   onTableSort(e) {
     console.log(e);
-    // this._fetchGridData(this._gridFilterData);
+    this._gridFilterData['property'] = e.active;
+    this._gridFilterData['direction'] = e.direction;
+
+    this._fetchGridData(this._gridFilterData); // FIXME backend not working
   }
 }

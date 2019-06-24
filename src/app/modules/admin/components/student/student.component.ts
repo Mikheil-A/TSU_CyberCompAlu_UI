@@ -12,6 +12,7 @@ import {StudentsService} from "../../../public/services/students.service";
 })
 export class StudentComponent implements OnInit {
   private _studentId: string;
+  studentInfo: object;
 
 
   constructor(private _activatedRoute: ActivatedRoute,
@@ -27,12 +28,12 @@ export class StudentComponent implements OnInit {
 
 
   private _getStudentId() {
-    this._studentId = this._activatedRoute.snapshot.paramMap.get('id')
+    this._studentId = this._activatedRoute.snapshot.paramMap.get('id');
   }
 
   private _fetchStudentInfo(id: string) {
     this._studentsService.getStudent(id).subscribe((res) => {
-      console.log(res);
+      this.studentInfo = res['data'];
     }, () => {
     }, () => {
       this._ngxSpinnerService.hide();

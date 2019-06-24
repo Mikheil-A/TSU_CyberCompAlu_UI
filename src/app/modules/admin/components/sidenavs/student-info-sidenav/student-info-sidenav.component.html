@@ -1,8 +1,19 @@
-<header>
-  <h1>full name</h1>
+<div *ngIf="studentInfo">
 
-  <a [routerLink]="'/student/' + studentId" target="_blank"
-     matTooltip="ახალ ტაბში გახსნა">
-    <mat-icon>open_in_new</mat-icon>
-  </a>
-</header>
+  <header>
+    <h1>{{studentInfo.name}} {{studentInfo.last_name}}</h1>
+
+    <a [routerLink]="'/student/' + studentId" target="_blank"
+       matTooltip="ახალ ტაბში გახსნა">
+      <mat-icon>open_in_new</mat-icon>
+    </a>
+  </header>
+
+  <div>
+    <ul>
+      <li>{{studentInfo.email}}</li>
+      <li>{{studentInfo.username}}</li>
+    </ul>
+  </div>
+
+</div>

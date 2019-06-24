@@ -1,29 +1,57 @@
 <div id="dialog-container">
   <h1>სტუდენტის {{addOrEditTitle}}</h1>
 
-<!--  <form [formGroup]="formGroup" (ngSubmit)="save()">-->
+  <form [formGroup]="formGroup" (ngSubmit)="save()">
+    <mat-form-field appearance="outline">
+      <mat-label>სახელი</mat-label>
+      <input type="text" formControlName="name" matInput placeholder="სახელი" required>
+    </mat-form-field>
 
-<!--    <mat-form-field appearance="outline">-->
-<!--      <mat-label>სახელი</mat-label>-->
-<!--      <input type="text" formControlName="firstName" matInput placeholder="სახელი" required>-->
-<!--    </mat-form-field>-->
+    <mat-form-field appearance="outline">
+      <mat-label>გვარი</mat-label>
+      <input type="text" formControlName="last_name" matInput placeholder="გვარი" required>
+    </mat-form-field>
 
-<!--    <mat-form-field appearance="outline">-->
-<!--      <mat-label>გვარი</mat-label>-->
-<!--      <input type="text" formControlName="lastName" matInput placeholder="გვარი" required>-->
-<!--    </mat-form-field>-->
+    <mat-form-field appearance="outline">
+      <mat-label>მისამართი</mat-label>
+      <input type="email" formControlName="email" matInput placeholder="მეილი" required>
+    </mat-form-field>
 
-<!--    <mat-form-field appearance="outline">-->
-<!--      <mat-label>მისამართი</mat-label>-->
-<!--      <input type="text" formControlName="address" matInput placeholder="მისამართი" required>-->
-<!--    </mat-form-field>-->
+    <label>დაბადების თარიღი</label>
+    <mat-form-field appearance="outline">
+      <input formControlName="graduate_date" matInput [matDatepicker]="birthDatePicker" placeholder="დაბადების თარიღი">
+      <mat-datepicker-toggle matSuffix [for]="birthDatePicker">
+        <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #birthDatePicker></mat-datepicker>
+    </mat-form-field>
 
-<!--    <button mat-button type="submit"-->
-<!--            class="big-button-style"-->
-<!--            [ngStyle]="{'cursor': formGroup.invalid ? 'not-allowed' : 'pointer'}">შენახვა-->
-<!--    </button>-->
+    <label>უნივერსიტეტის დამთავრების თარიღი</label>
+    <mat-form-field appearance="outline">
+      <input formControlName="graduate_date" matInput [matDatepicker]="graduateDatePicker"
+             placeholder="უნივერსიტეტის დამთავრების თარიღი">
+      <mat-datepicker-toggle matSuffix [for]="graduateDatePicker">
+        <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+      </mat-datepicker-toggle>
+      <mat-datepicker #graduateDatePicker></mat-datepicker>
+    </mat-form-field>
 
-<!--  </form>-->
+    <label>მომხმარებლის სტატუსი</label>
+    <mat-form-field appearance="outline">
+      <mat-select formControlName="profile_id">
+        <mat-option [value]="1">ადმინი</mat-option>
+        <mat-option [value]="2">სტუდენტი</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-checkbox formControlName="employed">დასაქმების სტატუსი</mat-checkbox>
+
+
+    <button mat-button type="submit"
+            class="big-button-style"
+            [ngStyle]="{'cursor': formGroup.invalid ? 'not-allowed' : 'pointer'}">შენახვა
+    </button>
+  </form>
 </div>
 
-<button (click)="save()">Add</button>
+<button (click)="save()">TEST ADD</button>
