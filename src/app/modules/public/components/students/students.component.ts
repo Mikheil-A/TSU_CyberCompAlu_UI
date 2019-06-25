@@ -5,6 +5,7 @@ import {ConfirmSeniorStudentDeletionDialogComponent} from "../../../admin/compon
 import {NgxSpinnerService} from "ngx-spinner";
 import {StudentsMock} from "../../mocks/students.mock";
 import {StudentsService} from "../../services/students.service";
+import {MatSnackBarService} from "../../../shared/services/mat-snack-bar.service";
 
 
 
@@ -51,7 +52,8 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   constructor(private _matDialog: MatDialog,
               private _ngxSpinnerService: NgxSpinnerService,
               private _studentsMock: StudentsMock,
-              private _studentsService: StudentsService) {
+              private _studentsService: StudentsService,
+              private _matSnackBarService: MatSnackBarService) {
     super();
 
     this._setPaginatorInGeorgian();
@@ -110,6 +112,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
       if (isAdded) {
         // this._fetchGridData(this._gridFilterData);
         this._fetchGridData({});
+        this._matSnackBarService.openSnackBar('სტუდენტი წარმატებით შეინახა');
       }
     })
   }
@@ -122,6 +125,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     const deleteSubscription = dialogRef.componentInstance.onDelete.subscribe(() => {
       // this._fetchGridData(this._gridFilterData);
       this._fetchGridData({});
+      this._matSnackBarService.openSnackBar('სტუდენტი წარმატებით წაიშალა');
     });
 
     dialogRef.afterClosed().subscribe((isDeleted: boolean) => {
@@ -149,17 +153,16 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
   onPagingChange(e) {
     console.log(e);
-    this._gridFilterData['page'] = e.pageIndex;
+    this._gridFilterData['page'] = e.pageIndex + 1;
     this._gridFilterData['limit'] = e.pageSize;
 
     this._fetchGridData(this._gridFilterData); // FIXME backend not working
   }
 
   onTableSort(e) {
-    console.log(e);
     this._gridFilterData['property'] = e.active;
     this._gridFilterData['direction'] = e.direction;
 
-    this._fetchGridData(this._gridFilterData); // FIXME backend not working
+    this._fetchGridData(this._gridFilterData);
   }
 }

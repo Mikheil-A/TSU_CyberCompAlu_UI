@@ -26,14 +26,13 @@ export class AuthService {
 
     // requestData = {
     //   "email": "giorgi.nikolaishvili25@gmail.com",
-    //   "password": "gigi25"
+    //   "password": "gigi25" || "123456"
     // };
 
     return this._httpClient.post('/api/auth/login', requestData, options).pipe(
       map(res => {
         if (res['status'] === 200) {
-          // TODO username????
-          this._saveUserSessionData(res['body'].token, res['body']['user_id']);
+          this.saveUserSessionData(res['body'].token, res['body'].user_id);
           return res['body'];
         }
       }),
@@ -46,6 +45,10 @@ export class AuthService {
     this._router.navigate(['auth']);
   }
 
+  changePassword(data: object) {
+    return this._httpClient.post('/api/users/password_reset', data);
+  }
+
   private _handleUnauthorizedError() {
     return (errorResponse: any) => {
       if (errorResponse.status === 401) {
@@ -56,11 +59,15 @@ export class AuthService {
     };
   }
 
-  private _saveUserSessionData(token: string, userId: number) {
-    if (token && userId) {
+  saveUserSessionData(token?: string, userId?: number, loggedInUserData?: object) {
+    if (token) {
       localStorage.setItem('access_token', token);
+    }
+    if (userId) {
       localStorage.setItem('user_id', userId.toString());
-      localStorage.setItem('username', 'test username');
+    }
+    if (loggedInUserData) {
+      localStorage.setItem('userData', JSON.stringify(loggedInUserData));
     }
   }
 

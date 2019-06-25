@@ -6,10 +6,19 @@
       <img src="assets/images/header/tsu-logo.png">
     </a>
 
-    <div id="authentication">
+    <div id="authentication" *ngIf="username">
       <div id="user">
+
         <p id="greetings">მოგესალმებით <span id="username">{{username}}</span></p>
         <img src="assets/images/header/user-profile-photo.png" height="41" width="41">
+
+        <button mat-button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>arrow_drop_down</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="openChangePasswordDialog()">პაროლის ცვლილება</button>
+        </mat-menu>
+
       </div>
 
       <button mat-button mat-icon-button

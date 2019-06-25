@@ -46,8 +46,8 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
     this.addOrEditTitle = 'ჩასწორება';
 
     // Setting clicked record values to input fields
-    this._inputFieldsInitialValues.name = this._clickedStudentData.full_name;
-    this._inputFieldsInitialValues.last_name = this._clickedStudentData.full_name;
+    this._inputFieldsInitialValues.name = this._clickedStudentData.name;
+    this._inputFieldsInitialValues.last_name = this._clickedStudentData.last_name;
     this._inputFieldsInitialValues.email = this._clickedStudentData.email;
     this._inputFieldsInitialValues.birth_date = this._clickedStudentData.birth_date;
     this._inputFieldsInitialValues.graduate_date = this._clickedStudentData.graduate_date;
@@ -59,11 +59,11 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
     this.formGroup = new FormGroup({
       'name': new FormControl(this._inputFieldsInitialValues.name, Validators.required),
       'last_name': new FormControl(this._inputFieldsInitialValues.last_name, Validators.required),
-      'email': new FormControl(this._inputFieldsInitialValues.email, Validators.required),
+      'email': new FormControl(this._inputFieldsInitialValues.email, [Validators.required, Validators.email]),
       'birth_date': new FormControl(this._inputFieldsInitialValues.birth_date, Validators.required),
       'graduate_date': new FormControl(this._inputFieldsInitialValues.graduate_date, Validators.required),
       'profile_id': new FormControl(this._inputFieldsInitialValues.profile_id, Validators.required),
-      'employed': new FormControl(this._inputFieldsInitialValues.employed, Validators.required), // 1 admin, 2 - student
+      'employed': new FormControl(this._inputFieldsInitialValues.employed), // 1 admin, 2 - student
     });
   }
 
