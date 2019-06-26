@@ -34,7 +34,11 @@ export class StudentComponent implements OnInit {
   private _fetchStudentInfo(id: string) {
     this._studentsService.getStudent(id).subscribe((res) => {
       this.studentInfo = res['data'];
-    }, () => {
+    }, (err) => {
+      // if (err.status === 401) {
+      //   this._ngxSpinnerService.hide();
+      //   this._router.navigate(['auth/sign-in']);
+      // }
     }, () => {
       this._ngxSpinnerService.hide();
     });

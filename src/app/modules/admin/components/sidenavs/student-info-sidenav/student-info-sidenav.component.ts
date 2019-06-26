@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {StudentsService} from "../../../../public/services/students.service";
+import {Component, Input, OnChanges} from '@angular/core';
 
 
 
@@ -8,23 +7,25 @@ import {StudentsService} from "../../../../public/services/students.service";
   templateUrl: './student-info-sidenav.component.html',
   styleUrls: ['./student-info-sidenav.component.scss']
 })
-export class StudentInfoSidenavComponent implements OnInit {
+export class StudentInfoSidenavComponent implements OnChanges {
   @Input() studentId: string;
-  studentInfo: object;
+  @Input() studentInfo: string;
+
+  // studentInfo: object;
 
 
-  constructor(private _studentsService: StudentsService) {
+  constructor() {
   }
 
-  ngOnInit() {
-    this._fetchStudent();
+  ngOnChanges() {
+    // this._fetchStudent();
   }
 
 
-  private _fetchStudent() {
-    this._studentsService.getStudent(this.studentId).subscribe(res => {
-      this.studentInfo = res['data'];
-      console.log(this.studentInfo);
-    });
-  }
+  // private _fetchStudent() {
+  //   this._studentsService.getStudent(this.studentId).subscribe(res => {
+  //     this.studentInfo = res['data'];
+  //     console.log(this.studentInfo);
+  //   });
+  // }
 }

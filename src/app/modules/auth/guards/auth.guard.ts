@@ -20,23 +20,11 @@ export class AuthGuard implements CanActivateChild {
 
   private _checkLogin(activatedUrl: string) {
 
-    if (!this._authService.isLoggedIn && activatedUrl === '/auth/sign-in') {
-      return true; // allow
-    }
-
     if (this._authService.isLoggedIn && activatedUrl === '/auth/sign-in') {
       this._router.navigate(['students']);
       return false;
     }
 
-    console.log('shemovida');
-    if (!this._authService.isLoggedIn && activatedUrl !== '/auth/sign-in') {
-      console.log('', activatedUrl);
-
-      this._router.navigate(['auth/sign-in']);
-      return false;
-    }
-
-    return true;
+    return true; // allow
   }
 }

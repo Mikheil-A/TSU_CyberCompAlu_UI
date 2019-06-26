@@ -6,7 +6,7 @@
       <img src="assets/images/header/tsu-logo.png">
     </a>
 
-    <div id="authentication" *ngIf="username">
+    <div id="authentication" *ngIf="username; else redirectToAuthPage">
       <div id="user">
 
         <p id="greetings">მოგესალმებით <span id="username">{{username}}</span></p>
@@ -26,6 +26,10 @@
         <img src="assets/images/header/log-out.png">
       </button>
     </div>
+
+    <ng-template #redirectToAuthPage>
+      <a routerLink="/auth/sign-in">ავტორიზაცია</a>
+    </ng-template>
 
   </div>
 

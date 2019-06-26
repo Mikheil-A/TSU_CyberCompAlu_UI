@@ -1,11 +1,12 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {MatDialog, MatPaginator, MatPaginatorIntl, MatSort, MatTableDataSource} from '@angular/material';
+import {MatDialog, MatPaginator, MatPaginatorIntl, MatSidenav, MatSort, MatTableDataSource} from '@angular/material';
 import {AddOrEditSeniorStudentDialogComponent} from "../../../admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component";
 import {ConfirmSeniorStudentDeletionDialogComponent} from "../../../admin/components/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component";
 import {NgxSpinnerService} from "ngx-spinner";
 import {StudentsMock} from "../../mocks/students.mock";
 import {StudentsService} from "../../services/students.service";
 import {MatSnackBarService} from "../../../shared/services/mat-snack-bar.service";
+import {AuthService} from "../../../auth/services/auth.service";
 
 
 
@@ -19,10 +20,11 @@ import {MatSnackBarService} from "../../../shared/services/mat-snack-bar.service
   ]
 })
 export class StudentsComponent extends MatPaginatorIntl implements OnInit {
-  @ViewChild('sidenav') private _sidenav;
+  @ViewChild('sidenav') private _sidenav: MatSidenav;
 
   sidenavId: number = null;
   clickedStudentId: string;
+  clickedStudentInfo: object;
 
 
   displayedColumns: string[] = ['employed', 'full_name', 'startDate', 'graduate_date', 'editAndDeleteIcons'];
@@ -53,7 +55,8 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
               private _ngxSpinnerService: NgxSpinnerService,
               private _studentsMock: StudentsMock,
               private _studentsService: StudentsService,
-              private _matSnackBarService: MatSnackBarService) {
+              private _matSnackBarService: MatSnackBarService,
+              public authService: AuthService) {
     super();
 
     this._setPaginatorInGeorgian();
@@ -98,11 +101,17 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   }
 
   openStudentInfoSideNav(id: string) {
-    this.sidenavId = 1;
-    this.clickedStudentId = id;
-    this._sidenav.open();
-  }
+    if (this.authService.isLoggedIn) {
+      this.sidenavId = 1;
+      this.clickedStudentId = id;
 
+      // fetch clicked student info
+      this._studentsService.getStudent(this.clickedStudentId).subscribe(res => {
+        this.clickedStudentInfo = res['data'];
+        this._sidenav.open();
+      });
+    }
+  }
 
   openAddOrEditSeniorStudentDialog(clickedRecordData: object = null) {
     const dialogRef = this._matDialog.open(AddOrEditSeniorStudentDialogComponent, {
