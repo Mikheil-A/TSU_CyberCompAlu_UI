@@ -99,11 +99,15 @@ THE SOFTWARE.
 
 @angular/material/icon
 
+@angular/material/menu
+
 @angular/material/paginator
 
 @angular/material/select
 
 @angular/material/sidenav
+
+@angular/material/snack-bar
 
 @angular/material/sort
 
