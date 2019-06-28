@@ -28,3 +28,12 @@ body {
   color: #4688f1;
   cursor: pointer;
 }
+
+@font-face {
+  font-family: bpg_dejavu_sans;
+  src: url(/assets/fonts/bpg_dejavu_sans.ttf);
+}
+
+* {
+  font-family: bpg_dejavu_sans;
+}
