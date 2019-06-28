@@ -1,5 +1,6 @@
 <h1>ნამდვილად გსურთ ჩანაწერის წაშლა?</h1>
 
 
-<button mat-button (click)="closeDialog(false)">არა</button>
+<!--<button mat-button (click)="closeDialog(false)">არა</button>-->
+<button mat-button (click)="matDialogRef.close()">არა</button>
 <button mat-button (click)="delete()" id="delete-btn">წაშლა</button>

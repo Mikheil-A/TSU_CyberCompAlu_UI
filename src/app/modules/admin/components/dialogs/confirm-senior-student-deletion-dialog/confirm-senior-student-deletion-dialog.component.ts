@@ -14,7 +14,7 @@ export class ConfirmSeniorStudentDeletionDialogComponent {
 
 
   constructor(private _studentsService: StudentsService,
-              private _matDialogRef: MatDialogRef<ConfirmSeniorStudentDeletionDialogComponent>,
+              public matDialogRef: MatDialogRef<ConfirmSeniorStudentDeletionDialogComponent>,
               @Inject(MAT_DIALOG_DATA) private _matDialogData: any) {
   }
 
@@ -27,7 +27,7 @@ export class ConfirmSeniorStudentDeletionDialogComponent {
     this._studentsService.delete(this._matDialogData).subscribe((res) => {
       this.onDelete.emit();
       // this.closeDialog(true);
-      this._matDialogRef.close();
+      this.matDialogRef.close();
     });
   }
 }
