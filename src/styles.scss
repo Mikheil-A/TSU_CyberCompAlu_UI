@@ -1,5 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// font families
+//@import "assets/fonts/fonts";
+
+@font-face {
+  font-family: bpg_dejavu_sans;
+  src: url(/assets/fonts/bpg_dejavu_sans.ttf);
+}
+
+@font-face {
+  font-family: uppercaseGeorgianLetters;
+  src: url(/assets/fonts/BPG_DejaVu_Sans_Web_Caps.ttf);
+}
+
+
+* {
+  font-family: bpg_dejavu_sans;
+}
 
 body {
   margin: 0;
@@ -7,7 +24,8 @@ body {
   background-color: #e5e6ee;
 }
 
-.big-button-style {
+button.big-button-style {
+  font-family: uppercaseGeorgianLetters !important;
   color: #eeeeee;
   background-color: #3b5f8c;
   height: 40px;
@@ -27,13 +45,4 @@ body {
 .link {
   color: #4688f1;
   cursor: pointer;
-}
-
-@font-face {
-  font-family: bpg_dejavu_sans;
-  src: url(/assets/fonts/bpg_dejavu_sans.ttf);
-}
-
-* {
-  font-family: bpg_dejavu_sans;
 }
