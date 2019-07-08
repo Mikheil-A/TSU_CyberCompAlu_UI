@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnChanges, Input} from '@angular/core';
 
 
 
@@ -7,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './personal-info.component.html',
   styleUrls: ['./personal-info.component.scss']
 })
-export class PersonalInfoComponent implements OnInit {
+export class PersonalInfoComponent implements OnChanges {
+  @Input() userInfo: object;
 
-  constructor() { }
 
-  ngOnInit(){
+  constructor() {
+  }
+
+  ngOnChanges() {
+    console.log(this.userInfo);
   }
 }
