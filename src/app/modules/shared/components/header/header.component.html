@@ -6,10 +6,11 @@
       <img src="assets/images/header/tsu-logo.png">
     </a>
 
-    <div id="authentication" *ngIf="username; else redirectToAuthPage">
+    <div id="authentication" *ngIf="loggedInUserData; else redirectToAuthPage">
       <div id="user">
 
-        <p id="greetings">მოგესალმებით <span id="username">{{username}}</span></p>
+        <p id="greetings">მოგესალმებით <span
+          id="username">{{loggedInUserData.name}} {{loggedInUserData.last_name}}</span></p>
         <img src="assets/images/header/user-profile-photo.png" height="41" width="41">
 
         <button mat-button mat-icon-button [matMenuTriggerFor]="menu">

@@ -7,17 +7,17 @@
     padding: 12px;
   }
 
-  .personal-info {
+  app-personal-info {
     background-color: orange;
     grid-area: personal-info;
   }
 
-  .hobbies {
+  app-hobbies {
     background-color: lightblue;
     grid-area: hobbies;
   }
 
-  .work-experience {
+  app-work-experience {
     background-color: green;
     grid-area: work-experience;
   }

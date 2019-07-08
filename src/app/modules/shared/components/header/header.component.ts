@@ -13,7 +13,7 @@ import {MatSnackBarService} from "../../services/mat-snack-bar.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  username: string = '';
+  loggedInUserData: object;
 
 
   constructor(private _authService: AuthService,
@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
     // get user data by id
     this._studentsService.getStudent(localStorage.getItem('user_id')).subscribe(res => {
       this._authService.saveUserSessionData(undefined, undefined, res['data']);
-      this.username = JSON.parse(localStorage.getItem('userData')).username;
+      this.loggedInUserData = JSON.parse(localStorage.getItem('userData'));
     });
   }
 

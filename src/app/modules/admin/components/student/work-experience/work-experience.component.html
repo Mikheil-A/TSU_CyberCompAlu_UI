@@ -1,0 +1,33 @@
+<div id="section-title">
+  <h1>სამუშაო გამოცდილება</h1>
+
+  <button mat-button mat-icon-button
+          matTooltip="დამატება"
+          (click)="openAddOrEditWorkExperienceDialog()">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+
+<mat-accordion>
+  <mat-expansion-panel *ngFor="let job of tempObj">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{job['job_title']}}
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <div class="expansion-panel-content">
+      {{job['job_desc']}}
+
+      <button mat-button mat-icon-button
+              matTooltip="ჩასწორება"
+              (click)="openAddOrEditWorkExperienceDialog()">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+
+  </mat-expansion-panel>
+</mat-accordion>
