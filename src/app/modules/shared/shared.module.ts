@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
-import {ReactiveFormsModule} from '@angular/forms';
+import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {BrowserModule} from '@angular/platform-browser';
 
@@ -34,6 +34,7 @@ import {NgxSpinnerModule} from "ngx-spinner";
   imports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule,
     BrowserModule,
     HttpClientModule,
@@ -43,6 +44,7 @@ import {NgxSpinnerModule} from "ngx-spinner";
   exports: [
     CommonModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule,
     BrowserModule,
     HttpClientModule,

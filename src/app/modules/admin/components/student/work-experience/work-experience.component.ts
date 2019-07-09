@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from "@angular/material";
 import {AddOrEditWorkExperienceDialogComponent} from "./add-or-edit-work-experience-dialog/add-or-edit-work-experience-dialog.component";
+import {MatSnackBarService} from "../../../../shared/services/mat-snack-bar.service";
 
 
 
@@ -17,16 +18,26 @@ export class WorkExperienceComponent implements OnInit {
   ];
 
 
-  constructor(private _matDialog: MatDialog) {
+  constructor(private _matDialog: MatDialog,
+              private _matSnackBarService: MatSnackBarService) {
   }
 
   ngOnInit() {
   }
 
 
-  openAddOrEditWorkExperienceDialog() {
+  openAddOrEditWorkExperienceDialog(data) {
     const dialogRef = this._matDialog.open(AddOrEditWorkExperienceDialogComponent, {
-      'data': 'test'
+      'data': data
     });
+
+    const saveSubscription = dialogRef.componentInstance.onSave.subscribe(() => {
+      // TODO update data
+      this._matSnackBarService.openSnackBar('სამუშაო გამოცდილება შეინახა');
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      saveSubscription.unsubscribe();
+    })
   }
 }

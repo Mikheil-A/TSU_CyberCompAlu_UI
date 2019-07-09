@@ -1,7 +1,19 @@
-<h1>ჰობი</h1>
+<h1>ჰობი ({{hobbiesArr.length}})</h1>
 
-<ul>
-  <li>item 1</li>
-  <li>item 2</li>
-  <li>item 3</li>
+
+<mat-form-field appearance="outline">
+  <mat-label>ახალი ჰობი</mat-label>
+  <input type="text" [(ngModel)]="aNewHobby" matInput placeholder="ახალი ჰობი">
+</mat-form-field>
+<button mat-button mat-icon-button matTooltip="ჰობის დამატება" matTooltipPosition="right" [disabled]="!aNewHobby">
+  <mat-icon (click)="addHobby()">add</mat-icon>
+</button>
+
+<ul *ngFor="let hobby of hobbiesArr; index as i">
+  <li>
+    {{hobby}}
+    <button mat-button mat-icon-button matTooltip="ჰობის ამოშლა" matTooltipPosition="right">
+      <mat-icon (click)="removeClickedHobby(i)">delete_outline</mat-icon>
+    </button>
+  </li>
 </ul>

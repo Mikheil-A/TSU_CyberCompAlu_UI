@@ -25,4 +25,8 @@ export class StudentsService {
   getStudent(studentId: string) {
     return this._httpClient.get(`/api/users/${studentId}/edit`);
   }
+
+  addWorkExperience(data: object){
+    return this._httpClient.post('/api/usawfefwfer', data);
+  }
 }
