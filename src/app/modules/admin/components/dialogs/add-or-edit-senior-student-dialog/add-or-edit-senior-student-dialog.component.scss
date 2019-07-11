@@ -12,7 +12,8 @@
   }
 
   form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: "firstName lastName" "address birthDate" "graduateDate userStatus" "employmentStatus employmentStatus" "submitBtn submitBtn";
   }
 }
