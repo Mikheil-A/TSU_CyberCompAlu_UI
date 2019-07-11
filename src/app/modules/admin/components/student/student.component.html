@@ -5,7 +5,7 @@
 
   <app-personal-info [userInfo]="studentInfo"></app-personal-info>
 
-  <app-hobbies></app-hobbies>
+  <app-hobbies [hobbiesStr]="['test1', 'test2', 'test3', 'test4'].toString()" (onHobbiesChange)="fetchStudentInfo(studentId)"></app-hobbies>
 
   <app-work-experience></app-work-experience>
 

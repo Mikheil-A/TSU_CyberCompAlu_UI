@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnChanges, Input, Output, EventEmitter} from '@angular/core';
 import {MatSnackBarService} from "../../../../shared/services/mat-snack-bar.service";
 import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 import {StudentsService} from "../../../../public/services/students.service";
+import {NgxSpinnerService} from "ngx-spinner";
 
 
 
@@ -10,23 +11,25 @@ import {StudentsService} from "../../../../public/services/students.service";
   templateUrl: './hobbies.component.html',
   styleUrls: ['./hobbies.component.scss']
 })
-export class HobbiesComponent implements OnInit {
+export class HobbiesComponent implements OnChanges {
+  @Input() hobbiesStr: string;
   hobbiesArr: string[] = [];
   aNewHobby: string = '';
 
+  @Output() onHobbiesChange = new EventEmitter<any>();
+
   requestData: object = {
-    'id': 3,
-    'hobbies': this.hobbiesArr.toString()
+    'hobby': this.hobbiesArr.toString()
   };
 
 
   constructor(private _matSnackBarService: MatSnackBarService,
-              private _studentsService: StudentsService) {
+              private _studentsService: StudentsService,
+              private _ngxSpinnerService: NgxSpinnerService,) {
   }
 
-  ngOnInit() {
-    const testInputArr: string = ['test1', 'test2', 'test3', 'test4'].toString();
-    this.hobbiesArr = testInputArr.split(',');
+  ngOnChanges() {
+    this.hobbiesArr = this.hobbiesStr.split(',');
   }
 
 
@@ -34,13 +37,15 @@ export class HobbiesComponent implements OnInit {
     moveItemInArray(this.hobbiesArr, event.previousIndex, event.currentIndex);
 
     this._reAssignRequestData();
-    this._studentsService.modifyHobbies(this.requestData).subscribe(() => {
+    this._studentsService.modifyHobbies(localStorage.getItem('user_id'), this.requestData).subscribe(() => {
+      this.onHobbiesChange.emit();
       this._matSnackBarService.openSnackBar('ჰობის ცვლილება შეინახა');
     });
   }
 
   private _reAssignRequestData(): void {
-    this.requestData['hobbies'] = this.hobbiesArr.toString();
+    this._ngxSpinnerService.show();
+    this.requestData['hobby'] = this.hobbiesArr.toString();
   }
 
   addHobby(): void {
@@ -51,7 +56,8 @@ export class HobbiesComponent implements OnInit {
     this.aNewHobby = '';
 
     this._reAssignRequestData();
-    this._studentsService.modifyHobbies(this.requestData).subscribe(() => {
+    this._studentsService.modifyHobbies(localStorage.getItem('user_id'), this.requestData).subscribe(() => {
+      this.onHobbiesChange.emit();
       this._matSnackBarService.openSnackBar('ახალი ჰობი დაემატა');
     });
   }
@@ -59,7 +65,8 @@ export class HobbiesComponent implements OnInit {
   removeClickedHobby(index: number): void {
     this.hobbiesArr.splice(index, 1);
     this._reAssignRequestData();
-    this._studentsService.modifyHobbies(this.requestData).subscribe(() => {
+    this._studentsService.modifyHobbies(localStorage.getItem('user_id'), this.requestData).subscribe(() => {
+      this.onHobbiesChange.emit();
       this._matSnackBarService.openSnackBar('ჰობი ამოიშალა');
     });
   }

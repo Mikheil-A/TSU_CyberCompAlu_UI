@@ -43,7 +43,7 @@ export class StudentsService {
     return this._httpClient.post('/api/usawfefwfer', data);
   }
 
-  modifyHobbies(data: object) {
-    return this._httpClient.post('/api/usawfeafwefwefwfwfer', data);
+  modifyHobbies(userId: number, data: object) {
+    return this._httpClient.put(`/api/users/${userId}`, data);
   }
 }

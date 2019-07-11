@@ -11,27 +11,28 @@ import {StudentsService} from "../../../public/services/students.service";
   styleUrls: ['./student.component.scss']
 })
 export class StudentComponent implements OnInit {
-  private _studentId: string;
+  studentId: string;
   studentInfo: object;
 
 
   constructor(private _activatedRoute: ActivatedRoute,
               private _ngxSpinnerService: NgxSpinnerService,
               private _studentsService: StudentsService) {
-    this._ngxSpinnerService.show();
     this._getStudentId();
   }
 
   ngOnInit() {
-    this._fetchStudentInfo(this._studentId);
+    this.fetchStudentInfo(this.studentId);
   }
 
 
   private _getStudentId() {
-    this._studentId = this._activatedRoute.snapshot.paramMap.get('id');
+    this.studentId = this._activatedRoute.snapshot.paramMap.get('id');
   }
 
-  private _fetchStudentInfo(id: string) {
+  fetchStudentInfo(id: string) {
+    this._ngxSpinnerService.show();
+
     this._studentsService.getStudent(id).subscribe((res) => {
       this.studentInfo = res['data'];
     }, (err) => {
