@@ -9,11 +9,11 @@
   <mat-icon (click)="addHobby()">add</mat-icon>
 </button>
 
-<ul *ngFor="let hobby of hobbiesArr; index as i">
-  <li>
+<div cdkDropList class="example-list" (cdkDropListDropped)="onDragAndDrop($event)">
+  <div class="example-box" *ngFor="let hobby of hobbiesArr; index as i" cdkDrag>
     {{hobby}}
     <button mat-button mat-icon-button matTooltip="ჰობის ამოშლა" matTooltipPosition="right">
       <mat-icon (click)="removeClickedHobby(i)">delete_outline</mat-icon>
     </button>
-  </li>
-</ul>
+  </div>
+</div>

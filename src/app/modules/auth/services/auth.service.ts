@@ -36,7 +36,7 @@ export class AuthService {
           return res['body'];
         }
       }),
-      catchError(this._handleUnauthorizedError())
+      catchError(this.handleUnauthorizedError())
     );
   }
 
@@ -49,11 +49,12 @@ export class AuthService {
     return this._httpClient.post('/api/users/password_reset', data);
   }
 
-  private _handleUnauthorizedError() {
+  public handleUnauthorizedError() {
     return (errorResponse: any) => {
       if (errorResponse.status === 401) {
         // "Unauthorized" error
-        this.logout();
+        this._clearUserSessionData();
+        this._router.navigate(['']); // index route is 'students'
       }
       return throwError(errorResponse.error);
     };

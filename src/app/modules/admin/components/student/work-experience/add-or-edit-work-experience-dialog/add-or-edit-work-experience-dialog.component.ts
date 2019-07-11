@@ -66,7 +66,10 @@ export class AddOrEditWorkExperienceDialogComponent implements OnInit {
   submit() {
     console.log(this.addOrEditWorkExperienceFormGroup.value);
 
-    this._studentsService.addWorkExperience(this.addOrEditWorkExperienceFormGroup.value).subscribe(() => {
+    let reqData: object = this.addOrEditWorkExperienceFormGroup.value;
+    reqData['id'] = 10;
+
+    this._studentsService.addWorkExperience(reqData).subscribe(() => {
       this.onSave.emit();
     });
   }

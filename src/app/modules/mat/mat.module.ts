@@ -18,6 +18,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 import {MAT_DATE_LOCALE} from "@angular/material/core";
 
@@ -43,7 +44,8 @@ import {MAT_DATE_LOCALE} from "@angular/material/core";
     MatSelectModule,
     MatMenuModule,
     MatSnackBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    DragDropModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -63,7 +65,8 @@ import {MAT_DATE_LOCALE} from "@angular/material/core";
     MatSelectModule,
     MatMenuModule,
     MatSnackBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    DragDropModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'en-GB'}
