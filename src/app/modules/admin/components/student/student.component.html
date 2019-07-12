@@ -1,13 +1,15 @@
 <app-header></app-header>
 
 
-<div id="student-grid-container">
+<div id="student-grid-container" *ngIf="studentInfo">
 
   <app-personal-info [userInfo]="studentInfo"></app-personal-info>
 
-  <app-hobbies [hobbiesStr]="['test1', 'test2', 'test3', 'test4'].toString()" (onHobbiesChange)="fetchStudentInfo(studentId)"></app-hobbies>
+  <app-hobbies [hobbiesStr]="studentInfo['hobby']"
+               (onHobbiesChange)="fetchStudentInfo(studentId)"></app-hobbies>
 
-  <app-work-experience></app-work-experience>
+  <app-work-experience [workExperiences]="studentInfo['user_portfolios']"
+                       (onWorkExperiencesChange)="fetchStudentInfo(studentId)"></app-work-experience>
 
   <div class="portfolio">
     <h1>პორტფოლიო</h1>

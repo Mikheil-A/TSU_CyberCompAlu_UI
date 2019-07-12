@@ -72,7 +72,7 @@
             </button>
             <button mat-button mat-icon-button
                     matTooltip="წაშლა"
-                    (click)="openConfirmSeniorStudentDeletionDialog(row.id)"
+                    (click)="openConfirmDeletionDialog(row.id)"
                     [disabled]="!authService.isLoggedIn">
               <mat-icon>delete</mat-icon>
             </button>

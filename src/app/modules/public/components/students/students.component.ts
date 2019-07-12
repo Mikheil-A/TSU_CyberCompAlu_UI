@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {MatDialog, MatPaginator, MatPaginatorIntl, MatSidenav, MatSort, MatTableDataSource} from '@angular/material';
 import {AddOrEditSeniorStudentDialogComponent} from "../../../admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component";
-import {ConfirmSeniorStudentDeletionDialogComponent} from "../../../admin/components/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component";
+import {ConfirmDeletionDialogComponent} from "../../../shared/components/dialogs/confirm-deletion-dialog/confirm-deletion-dialog.component";
 import {NgxSpinnerService} from "ngx-spinner";
 import {StudentsMock} from "../../mocks/students.mock";
 import {StudentsService} from "../../services/students.service";
@@ -126,15 +126,18 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     })
   }
 
-  openConfirmSeniorStudentDeletionDialog(studentId: number) {
-    const dialogRef = this._matDialog.open(ConfirmSeniorStudentDeletionDialogComponent, {
-      'data': studentId
+  openConfirmDeletionDialog(studentId: number) {
+    const dialogRef = this._matDialog.open(ConfirmDeletionDialogComponent, {
+      'data': null
     });
 
     const deleteSubscription = dialogRef.componentInstance.onDelete.subscribe(() => {
       // this._fetchGridData(this._gridFilterData);
-      this._fetchGridData({});
-      this._matSnackBarService.openSnackBar('სტუდენტი წარმატებით წაიშალა');
+      this._studentsService.delete(studentId).subscribe(() => {
+        dialogRef.close();
+        this._fetchGridData({});
+        this._matSnackBarService.openSnackBar('სტუდენტი წარმატებით წაიშალა');
+      });
     });
 
     dialogRef.afterClosed().subscribe((isDeleted: boolean) => {

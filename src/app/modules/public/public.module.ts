@@ -1,7 +1,6 @@
 import {NgModule} from '@angular/core';
 
 import {AddOrEditSeniorStudentDialogComponent} from "../admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component";
-import {ConfirmSeniorStudentDeletionDialogComponent} from "../admin/components/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component";
 
 import {PublicRoutingModule} from "./public-routing.module";
 import {SharedModule} from "../shared/shared.module";
@@ -24,8 +23,6 @@ import {StudentsService} from "./services/students.service";
     StudentsComponent,
 
     AddOrEditSeniorStudentDialogComponent,
-    ConfirmSeniorStudentDeletionDialogComponent,
-
     StudentInfoSidenavComponent,
     FilterGridSidenavComponent
   ],
@@ -41,8 +38,7 @@ import {StudentsService} from "./services/students.service";
     SharedModule
   ],
   entryComponents: [
-    AddOrEditSeniorStudentDialogComponent,
-    ConfirmSeniorStudentDeletionDialogComponent
+    AddOrEditSeniorStudentDialogComponent
   ],
 })
 export class PublicModule {

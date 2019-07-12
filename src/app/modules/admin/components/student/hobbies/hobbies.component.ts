@@ -18,10 +18,6 @@ export class HobbiesComponent implements OnChanges {
 
   @Output() onHobbiesChange = new EventEmitter<any>();
 
-  requestData: object = {
-    'hobby': this.hobbiesArr.toString()
-  };
-
 
   constructor(private _matSnackBarService: MatSnackBarService,
               private _studentsService: StudentsService,
@@ -29,23 +25,33 @@ export class HobbiesComponent implements OnChanges {
   }
 
   ngOnChanges() {
-    this.hobbiesArr = this.hobbiesStr.split(',');
+    // assign hobbies array
+    if (this.hobbiesStr) {
+      this.hobbiesArr = this.hobbiesStr.split(',');
+    }
+  }
+
+
+  private get _getRequestData(): object {
+    this._ngxSpinnerService.show();
+
+    return {
+      'user_id': localStorage.getItem('user_id'),
+      'hobby': this.hobbiesArr.toString()
+    };
+  }
+
+  private _sendRequest(actionMessage: string): void {
+    this._studentsService.modifyHobbies(this._getRequestData).subscribe(() => {
+      this.onHobbiesChange.emit();
+      this._matSnackBarService.openSnackBar(actionMessage);
+    });
   }
 
 
   onDragAndDrop(event: CdkDragDrop<string[]>): void {
     moveItemInArray(this.hobbiesArr, event.previousIndex, event.currentIndex);
-
-    this._reAssignRequestData();
-    this._studentsService.modifyHobbies(localStorage.getItem('user_id'), this.requestData).subscribe(() => {
-      this.onHobbiesChange.emit();
-      this._matSnackBarService.openSnackBar('ჰობის ცვლილება შეინახა');
-    });
-  }
-
-  private _reAssignRequestData(): void {
-    this._ngxSpinnerService.show();
-    this.requestData['hobby'] = this.hobbiesArr.toString();
+    this._sendRequest('ჰობის ცვლილება შეინახა');
   }
 
   addHobby(): void {
@@ -55,19 +61,11 @@ export class HobbiesComponent implements OnChanges {
     this.hobbiesArr.push(this.aNewHobby);
     this.aNewHobby = '';
 
-    this._reAssignRequestData();
-    this._studentsService.modifyHobbies(localStorage.getItem('user_id'), this.requestData).subscribe(() => {
-      this.onHobbiesChange.emit();
-      this._matSnackBarService.openSnackBar('ახალი ჰობი დაემატა');
-    });
+    this._sendRequest('ახალი ჰობი დაემატა');
   }
 
   removeClickedHobby(index: number): void {
     this.hobbiesArr.splice(index, 1);
-    this._reAssignRequestData();
-    this._studentsService.modifyHobbies(localStorage.getItem('user_id'), this.requestData).subscribe(() => {
-      this.onHobbiesChange.emit();
-      this._matSnackBarService.openSnackBar('ჰობი ამოიშალა');
-    });
+    this._sendRequest('ჰობი ამოიშალა');
   }
 }

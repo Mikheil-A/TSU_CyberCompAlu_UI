@@ -10,11 +10,13 @@ import {MatSnackBarService} from "./services/mat-snack-bar.service";
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {TokenInterceptor} from "./interceptors/token.interceptor";
 
-
+// components
 import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from './components/footer/footer.component';
 
+// dialog components
 import {ChangePasswordDialogComponent} from './components/header/change-password-dialog/change-password-dialog.component';
+import {ConfirmDeletionDialogComponent} from "./components/dialogs/confirm-deletion-dialog/confirm-deletion-dialog.component";
 
 import {MatModule} from "../mat/mat.module";
 import {NgxSpinnerModule} from "ngx-spinner";
@@ -23,15 +25,21 @@ import {NgxSpinnerModule} from "ngx-spinner";
 
 @NgModule({
   declarations: [
+    // components
     HeaderComponent,
     FooterComponent,
 
-    ChangePasswordDialogComponent
+    // dialog components
+    ChangePasswordDialogComponent,
+    ConfirmDeletionDialogComponent
   ],
   entryComponents: [
-    ChangePasswordDialogComponent
+    // dialog components
+    ChangePasswordDialogComponent,
+    ConfirmDeletionDialogComponent
   ],
   imports: [
+    // modules
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
@@ -42,6 +50,7 @@ import {NgxSpinnerModule} from "ngx-spinner";
     NgxSpinnerModule
   ],
   exports: [
+    // modules
     CommonModule,
     ReactiveFormsModule,
     FormsModule,
@@ -51,6 +60,7 @@ import {NgxSpinnerModule} from "ngx-spinner";
     MatModule,
     NgxSpinnerModule,
 
+    // components
     HeaderComponent,
     FooterComponent
   ],

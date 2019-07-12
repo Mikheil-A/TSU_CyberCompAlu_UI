@@ -9,24 +9,34 @@
 </div>
 
 
-<mat-accordion>
-  <mat-expansion-panel *ngFor="let job of tempObj">
+<mat-accordion *ngIf="workExperiences.length">
+  <mat-expansion-panel *ngFor="let workExperience of workExperiences">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{job['job_title']}}
+        <!--{{job['job_title']}}-->
+        <span>JOB TITLE!!!!!!!!!</span> <!--FIXME !!!!-->
+        <span>at {{workExperience['company_name']}}</span>
       </mat-panel-title>
       <mat-panel-description>
       </mat-panel-description>
     </mat-expansion-panel-header>
 
     <div class="expansion-panel-content">
-      {{job['job_desc']}}
+      <span>{{workExperience['description']}}</span>
+      <span>{{workExperience['start_date']}} - {{workExperience['end_date']}}</span>
 
-      <button mat-button mat-icon-button
-              matTooltip="ჩასწორება"
-              (click)="openAddOrEditWorkExperienceDialog(44242)">
-        <mat-icon>edit</mat-icon>
-      </button>
+      <div>
+        <button mat-button mat-icon-button
+                matTooltip="ჩასწორება"
+                (click)="openAddOrEditWorkExperienceDialog(workExperience)">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button mat-button mat-icon-button
+                matTooltip="წაშლა"
+                (click)="openConfirmDeletionDialog(workExperience)">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
     </div>
 
   </mat-expansion-panel>

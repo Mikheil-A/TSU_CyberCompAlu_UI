@@ -39,11 +39,11 @@ export class StudentsService {
     );
   }
 
-  addWorkExperience(data: object) {
-    return this._httpClient.post('/api/usawfefwfer', data);
+  addOrEditOrDeleteWorkExperience(data: object) {
+    return this._httpClient.put(`/api/users/${data['user'].id}`, data);
   }
 
-  modifyHobbies(userId: number, data: object) {
-    return this._httpClient.put(`/api/users/${userId}`, data);
+  modifyHobbies(data: object) {
+    return this._httpClient.put(`/api/users/${data['user_id']}`, data);
   }
 }

@@ -5,13 +5,14 @@
 
   <mat-form-field appearance="outline">
     <mat-label>კომპანია</mat-label>
-    <input type="text" formControlName="companyName" matInput placeholder="კომპანია" required>
+    <input type="text" formControlName="company_name" matInput placeholder="კომპანია" required>
   </mat-form-field>
 
-  <mat-form-field appearance="outline">
-    <mat-label>პოზიცია</mat-label>
-    <input type="text" formControlName="jobTitle" matInput placeholder="პოზიცია" required>
-  </mat-form-field>
+  <!--FIXME-->
+  <!--<mat-form-field appearance="outline">-->
+    <!--<mat-label>პოზიცია</mat-label>-->
+    <!--<input type="text" formControlName="jobTitle" matInput placeholder="პოზიცია" required>-->
+  <!--</mat-form-field>-->
 
   <mat-form-field appearance="outline">
     <mat-label>აღწერა / დამატებითი ინფორმაცია</mat-label>
@@ -19,7 +20,7 @@
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <input formControlName="startDate" matInput [matDatepicker]="startDatePicker" placeholder="დასაწყისი">
+    <input formControlName="start_date" matInput [matDatepicker]="startDatePicker" placeholder="დასაწყისი">
     <mat-datepicker-toggle matSuffix [for]="startDatePicker">
       <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
     </mat-datepicker-toggle>
@@ -27,7 +28,7 @@
   </mat-form-field>
 
   <mat-form-field appearance="outline">
-    <input formControlName="endDate" matInput [matDatepicker]="endDatePicker" placeholder="დასასრული">
+    <input formControlName="end_date" matInput [matDatepicker]="endDatePicker" placeholder="დასასრული">
     <mat-datepicker-toggle matSuffix [for]="endDatePicker">
       <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
     </mat-datepicker-toggle>
@@ -35,6 +36,6 @@
   </mat-form-field>
 
 
-  <button class="big-button-style" mat-button type="submit">შესვლა</button>
+  <button class="big-button-style" mat-button type="submit">{{addOrEditTitle}}</button>
 
 </form>
