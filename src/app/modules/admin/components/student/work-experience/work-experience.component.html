@@ -3,7 +3,8 @@
 
   <button mat-button mat-icon-button
           matTooltip="დამატება"
-          (click)="openAddOrEditWorkExperienceDialog(null)">
+          (click)="openAddOrEditWorkExperienceDialog(null)"
+          [disabled]="!canEdit">
     <mat-icon>add</mat-icon>
   </button>
 </div>
@@ -13,9 +14,8 @@
   <mat-expansion-panel *ngFor="let workExperience of workExperiences">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        <!--{{job['job_title']}}-->
-        <span>JOB TITLE!!!!!!!!!</span> <!--FIXME !!!!-->
-        <span>at {{workExperience['company_name']}}</span>
+        <b>{{workExperience['job_title']}}</b>
+        <span>&nbsp;at {{workExperience['company_name']}}</span>
       </mat-panel-title>
       <mat-panel-description>
       </mat-panel-description>
@@ -28,12 +28,14 @@
       <div>
         <button mat-button mat-icon-button
                 matTooltip="ჩასწორება"
-                (click)="openAddOrEditWorkExperienceDialog(workExperience)">
+                (click)="openAddOrEditWorkExperienceDialog(workExperience)"
+                [disabled]="!canEdit">
           <mat-icon>edit</mat-icon>
         </button>
         <button mat-button mat-icon-button
                 matTooltip="წაშლა"
-                (click)="openConfirmDeletionDialog(workExperience)">
+                (click)="openConfirmDeletionDialog(workExperience)"
+                [disabled]="!canEdit">
           <mat-icon>delete</mat-icon>
         </button>
       </div>

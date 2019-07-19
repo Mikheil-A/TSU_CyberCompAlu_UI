@@ -9,6 +9,7 @@ import {Component, OnChanges, Input} from '@angular/core';
 })
 export class PersonalInfoComponent implements OnChanges {
   @Input() userInfo: object;
+  @Input() canEdit: boolean;
 
 
   constructor() {

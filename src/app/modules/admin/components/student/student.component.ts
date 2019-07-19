@@ -13,6 +13,7 @@ import {StudentsService} from "../../../public/services/students.service";
 export class StudentComponent implements OnInit {
   studentId: string;
   studentInfo: object;
+  canEditTheProfile: boolean = false;
 
 
   constructor(private _activatedRoute: ActivatedRoute,
@@ -22,6 +23,7 @@ export class StudentComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.canEditTheProfile = this.studentId == JSON.parse(localStorage.getItem('userData')).id;
     this.fetchStudentInfo(this.studentId);
   }
 

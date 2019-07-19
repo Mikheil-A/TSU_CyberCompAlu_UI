@@ -18,8 +18,8 @@ export class AddOrEditWorkExperienceDialogComponent implements OnInit {
 
   addOrEditWorkExperienceFormGroup: FormGroup;
   private _inputFieldsInitialValues = {
-    'company_name': null, // first name
-    // 'jobTitle': null, // TODO ?????????
+    'company_name': null,
+    'job_title': null,
     'description': null,
     'start_date': null,
     'end_date': null
@@ -45,7 +45,7 @@ export class AddOrEditWorkExperienceDialogComponent implements OnInit {
 
     // Setting clicked record values to input fields
     this._inputFieldsInitialValues.company_name = this._workExperienceToEdit.company_name;
-    // this._inputFieldsInitialValues.jobTitle = this._dataaaa.jobTitle; // FIXME
+    this._inputFieldsInitialValues.job_title = this._workExperienceToEdit.job_title;
     this._inputFieldsInitialValues.description = this._workExperienceToEdit.description;
     this._inputFieldsInitialValues.start_date = this._workExperienceToEdit.start_date;
     this._inputFieldsInitialValues.end_date = this._workExperienceToEdit.end_date;
@@ -54,7 +54,7 @@ export class AddOrEditWorkExperienceDialogComponent implements OnInit {
   private _initializeForm() {
     this.addOrEditWorkExperienceFormGroup = new FormGroup({
       'company_name': new FormControl(this._inputFieldsInitialValues.company_name, Validators.required),
-      // 'jobTitle': new FormControl(this._inputFieldsInitialValues.jobTitle, Validators.required), // FIXME back-end api
+      'job_title': new FormControl(this._inputFieldsInitialValues.job_title, Validators.required),
       'description': new FormControl(this._inputFieldsInitialValues.description, Validators.required),
       'start_date': new FormControl(this._inputFieldsInitialValues.start_date, Validators.required),
       'end_date': new FormControl(this._inputFieldsInitialValues.end_date, Validators.required),
@@ -70,7 +70,7 @@ export class AddOrEditWorkExperienceDialogComponent implements OnInit {
 
     let reqData: object = {
       user: {
-        'id': 16, // FIXME
+        'id': JSON.parse(localStorage.getItem('userData')).id,
         'user_portfolios_attributes': [this.addOrEditWorkExperienceFormGroup.value]
       }
     };

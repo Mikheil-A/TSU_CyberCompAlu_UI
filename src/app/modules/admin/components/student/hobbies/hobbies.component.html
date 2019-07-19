@@ -3,16 +3,16 @@
 
 <mat-form-field appearance="outline">
   <mat-label>ახალი ჰობი</mat-label>
-  <input type="text" [(ngModel)]="aNewHobby" matInput placeholder="ახალი ჰობი">
+  <input type="text" [(ngModel)]="aNewHobby" matInput placeholder="ახალი ჰობი" [disabled]="!canEdit">
 </mat-form-field>
-<button mat-button mat-icon-button matTooltip="ჰობის დამატება" matTooltipPosition="right" [disabled]="!aNewHobby">
+<button mat-button mat-icon-button matTooltip="ჰობის დამატება" matTooltipPosition="right" [disabled]="!aNewHobby && !canEdit">
   <mat-icon (click)="addHobby()">add</mat-icon>
 </button>
 
 <div cdkDropList class="example-list" *ngIf="hobbiesArr.length > 0" (cdkDropListDropped)="onDragAndDrop($event)">
   <div class="example-box" *ngFor="let hobby of hobbiesArr; index as i" cdkDrag>
     {{hobby}}
-    <button mat-button mat-icon-button matTooltip="ჰობის ამოშლა" matTooltipPosition="right">
+    <button mat-button mat-icon-button matTooltip="ჰობის ამოშლა" matTooltipPosition="right" [disabled]="!canEdit">
       <mat-icon (click)="removeClickedHobby(i)">delete_outline</mat-icon>
     </button>
   </div>

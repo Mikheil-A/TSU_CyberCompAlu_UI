@@ -12,6 +12,7 @@ import {NgxSpinnerService} from "ngx-spinner";
   styleUrls: ['./hobbies.component.scss']
 })
 export class HobbiesComponent implements OnChanges {
+  @Input() canEdit: boolean;
   @Input() hobbiesStr: string;
   hobbiesArr: string[] = [];
   aNewHobby: string = '';
@@ -50,12 +51,15 @@ export class HobbiesComponent implements OnChanges {
 
 
   onDragAndDrop(event: CdkDragDrop<string[]>): void {
+    if (!this.canEdit) {
+      return;
+    }
     moveItemInArray(this.hobbiesArr, event.previousIndex, event.currentIndex);
     this._sendRequest('ჰობის ცვლილება შეინახა');
   }
 
   addHobby(): void {
-    if (!this.aNewHobby) {
+    if (!this.aNewHobby && !this.canEdit) {
       return;
     }
     this.hobbiesArr.push(this.aNewHobby);
@@ -65,6 +69,9 @@ export class HobbiesComponent implements OnChanges {
   }
 
   removeClickedHobby(index: number): void {
+    if (!this.canEdit) {
+      return;
+    }
     this.hobbiesArr.splice(index, 1);
     this._sendRequest('ჰობი ამოიშალა');
   }

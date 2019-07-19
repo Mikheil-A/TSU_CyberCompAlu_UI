@@ -15,6 +15,7 @@ import {StudentsService} from "../../../../public/services/students.service";
 export class WorkExperienceComponent {
   @Output() onWorkExperiencesChange = new EventEmitter();
   @Input() workExperiences: object[];
+  @Input() canEdit: boolean;
 
 
   constructor(private _matDialog: MatDialog,
@@ -64,7 +65,7 @@ export class WorkExperienceComponent {
     workExperienceToDelete['_destroy'] = true;
     let reqData: object = {
       user: {
-        'id': 16,
+        'id': JSON.parse(localStorage.getItem('userData')).id,
         'user_portfolios_attributes': [workExperienceToDelete]
       }
     };
