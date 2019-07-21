@@ -157,7 +157,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     if (this.authService.isLoggedIn) {
       this.sidenavId = 1;
       this.clickedStudentId = id;
-
+      console.log('zpooroor');
       // fetch clicked student info
       this._studentsService.getStudent(this.clickedStudentId).subscribe(res => {
         this.clickedStudentInfo = res['data'];

@@ -11,7 +11,7 @@
 
         <p id="greetings">მოგესალმებით <span
           id="username">{{loggedInUserData.name}} {{loggedInUserData.last_name}}</span></p>
-        <img src="assets/images/header/user-profile-photo.png" height="41" width="41">
+        <img [src]="loggedInUserData['image_base64']" height="41" width="41">
 
         <button mat-button mat-icon-button [matMenuTriggerFor]="menu">
           <mat-icon>arrow_drop_down</mat-icon>
