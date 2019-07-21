@@ -7,7 +7,9 @@ import {StudentsMock} from "../../mocks/students.mock";
 import {StudentsService} from "../../services/students.service";
 import {MatSnackBarService} from "../../../shared/services/mat-snack-bar.service";
 import {AuthService} from "../../../auth/services/auth.service";
-
+import {SelectionModel} from '@angular/cdk/collections';
+import {SendEmailDialogComponent} from "./send-email-dialog/send-email-dialog.component";
+import {AddOrEditWorkExperienceDialogComponent} from "../../../admin/components/student/work-experience/add-or-edit-work-experience-dialog/add-or-edit-work-experience-dialog.component";
 
 
 @Component({
@@ -27,8 +29,10 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   clickedStudentInfo: object;
 
 
-  displayedColumns: string[] = ['employed', 'full_name', 'startDate', 'graduate_date', 'editAndDeleteIcons'];
+  displayedColumns: string[] = ['checkboxSelect', 'employed', 'full_name', 'startDate', 'graduate_date', 'editAndDeleteIcons'];
   dataSource: MatTableDataSource<any>;
+  selection = new SelectionModel(true, []);
+
 
   private _gridFilterData: object = {
     // paginator
@@ -70,6 +74,28 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   }
 
 
+  /** Whether the number of selected elements matches the total number of rows. */
+  isAllSelected() {
+    const numSelected = this.selection.selected.length;
+    const numRows = this.dataSource.data.length;
+    return numSelected === numRows;
+  }
+
+  /** Selects all rows if they are not all selected; otherwise clear selection. */
+  masterToggle() {
+    this.isAllSelected() ?
+      this.selection.clear() :
+      this.dataSource.data.forEach(row => this.selection.select(row));
+  }
+
+  /** The label for the checkbox on the passed row */
+  checkboxLabel(row?): string {
+    if (!row) {
+      return `${this.isAllSelected() ? 'select' : 'deselect'} all`;
+    }
+    return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
+  }
+
   private _setPaginatorInGeorgian() {
     // Overwriting default properties of paginator
     this.itemsPerPageLabel = 'ჩანაწერების რაოდენობა გვერდზე:';
@@ -89,6 +115,21 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     }, () => {
       this._ngxSpinnerService.hide();
     });
+  }
+
+  openSendEmailDialog() {
+    const dialogRef = this._matDialog.open(SendEmailDialogComponent, {
+      'data': this.selection
+    });
+
+    const sendSubscription = dialogRef.componentInstance.onSend.subscribe(() => {
+      this._fetchGridData({});
+      this._matSnackBarService.openSnackBar('ელ. ფოსტა წარმატებით გაიგზავნა ');
+    });
+
+    dialogRef.afterClosed().subscribe(() => {
+      sendSubscription.unsubscribe();
+    })
   }
 
 

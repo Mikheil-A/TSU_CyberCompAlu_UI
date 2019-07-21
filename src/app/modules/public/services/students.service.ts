@@ -4,7 +4,6 @@ import {catchError} from 'rxjs/operators';
 import {AuthService} from '../../auth/services/auth.service';
 
 
-
 @Injectable()
 export class StudentsService {
 
@@ -45,5 +44,9 @@ export class StudentsService {
 
   modifyHobbies(data: object) {
     return this._httpClient.put(`/api/users/${data['user_id']}`, data);
+  }
+
+  sendMail(data: object) {
+    return this._httpClient.post('/api/users/send_mail', data);
   }
 }

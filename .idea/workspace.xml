@@ -2,107 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2efbfc4-bafb-4cd5-b348-c7db3cbd7700" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/proxy.dev.conf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/proxy.prod.conf.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/admin-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/admin.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/sidenavs/student-info-sidenav/student-info-sidenav.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/sidenavs/student-info-sidenav/student-info-sidenav.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/sidenavs/student-info-sidenav/student-info-sidenav.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/hobbies/hobbies.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/hobbies/hobbies.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/hobbies/hobbies.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/personal-info/personal-info.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/personal-info/personal-info.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/personal-info/personal-info.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/add-or-edit-work-experience-dialog/add-or-edit-work-experience-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/add-or-edit-work-experience-dialog/add-or-edit-work-experience-dialog.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/add-or-edit-work-experience-dialog/add-or-edit-work-experience-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/work-experience.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/work-experience.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/work-experience.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/guards/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/guards/admin.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/admin/services/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/auth-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/auth.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/sign-in/sign-in.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/sign-in/sign-in.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/sign-in/sign-in.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/directives/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/guards/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/guards/auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/pipes/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/services/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/auth/services/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/mat/mat.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/components/shared/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/components/sidenavs/filter-grid-sidenav/filter-grid-sidenav.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/components/sidenavs/filter-grid-sidenav/filter-grid-sidenav.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/components/sidenavs/filter-grid-sidenav/filter-grid-sidenav.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/mocks/students.mock.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/pipes/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/public-routing.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/public.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/services/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/public/services/students.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/dialogs/confirm-deletion-dialog/confirm-deletion-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/dialogs/confirm-deletion-dialog/confirm-deletion-dialog.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/dialogs/confirm-deletion-dialog/confirm-deletion-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/footer/footer.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/footer/footer.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/footer/footer.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/header/change-password-dialog/change-password-dialog.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/header/change-password-dialog/change-password-dialog.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/header/change-password-dialog/change-password-dialog.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/header/header.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/components/header/header.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/directives/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/interceptors/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/interceptors/token.interceptor.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/models/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/pipes/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/services/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/services/mat-snack-bar.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/modules/shared/shared.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/.gitkeep" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/BPG_DejaVu_Sans_Web_Caps.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/bpg_dejavu_sans.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fonts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/auth/ganivi.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/tsu-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e2e/src/app.e2e-spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/e2e/src/app.e2e-spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/authentication/authentication.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/auth/components/authentication/authentication.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/authentication/authentication.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/authentication/authentication.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/authentication/sign-in/sign-in.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/authentication/sign-in/sign-in.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/admin/components/shared/.gitkeep" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/authentication/sign-in/sign-in.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/shared/header/header.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/shared/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/shared/components/header/header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/shared/header/header.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/karma.conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/karma.conf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/public/public.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/public.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/modules/public/services/students.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/public/services/students.service.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,26 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/angular.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -154,6 +39,8 @@
       <find>FormsModule</find>
       <find>Output</find>
       <find>userData</find>
+      <find>AddOrEditSeniorStudentDialogComponent</find>
+      <find>dataSource</find>
     </findStrings>
     <dirStrings>
       <dir>D:\My Folder\Projects\Personal\TSU_CyberCompAlu_UI</dir>
@@ -166,9 +53,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/app/modules/shared/components/header/change-password-dialog/change-password-dialog.component.scss" />
-        <option value="$PROJECT_DIR$/src/app/modules/shared/components/header/change-password-dialog/change-password-dialog.component.html" />
-        <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/sign-in/sign-in.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/auth/components/authentication/sign-in/sign-in.component.scss" />
         <option value="$PROJECT_DIR$/src/app/modules/auth/auth-routing.module.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/public/public-routing.module.ts" />
@@ -200,13 +84,9 @@
         <option value="$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.scss" />
         <option value="$PROJECT_DIR$/src/app/modules/admin/components/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/admin/components/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component.scss" />
-        <option value="$PROJECT_DIR$/src/app/modules/public/public.module.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/shared/shared.module.ts" />
-        <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/shared/components/dialogs/confirm-deletion-dialog/confirm-deletion-dialog.component.html" />
-        <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/shared/components/dialogs/confirm-deletion-dialog/confirm-deletion-dialog.component.ts" />
-        <option value="$PROJECT_DIR$/src/app/modules/public/services/students.service.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/add-or-edit-work-experience-dialog/add-or-edit-work-experience-dialog.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/admin/components/student/personal-info/personal-info.component.ts" />
         <option value="$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.html" />
@@ -217,6 +97,13 @@
         <option value="$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/work-experience.component.html" />
         <option value="$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/work-experience.component.ts" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html" />
+        <option value="$PROJECT_DIR$/src/app/modules/public/public.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/modules/public/services/students.service.ts" />
+        <option value="$PROJECT_DIR$/src/app/modules/public/components/students/send-email-dialog/send-email-dialog.component.scss" />
+        <option value="$PROJECT_DIR$/src/app/modules/public/components/students/send-email-dialog/send-email-dialog.component.html" />
+        <option value="$PROJECT_DIR$/src/app/modules/public/components/students/send-email-dialog/send-email-dialog.component.ts" />
       </list>
     </option>
   </component>
@@ -235,28 +122,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TSU_CyberCompAlu_UI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="TSU_CyberCompAlu_UI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="ProjectPane" />
       <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
@@ -371,7 +237,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153368000" />
+    <option name="totallyTimeSpent" value="157010000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -384,9 +250,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29411766" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29411766" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Learn" order="3" />
@@ -461,34 +326,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/sidenavs/student-info-sidenav/student-info-sidenav.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/public/public-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="56" lean-forward="true" selection-start-line="8" selection-start-column="56" selection-end-line="8" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/auth-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/auth/guards/auth.guard.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/auth/auth.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1110">
@@ -583,13 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/mat/mat.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -601,13 +431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1830">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
         </state>
       </provider>
     </entry>
@@ -632,24 +455,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/public/public.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/shared/shared.module.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="961">
           <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="568">
-          <caret line="80" lean-forward="true" selection-start-line="80" selection-end-line="80" />
         </state>
       </provider>
     </entry>
@@ -664,13 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="961">
-          <caret line="180" lean-forward="true" selection-start-line="180" selection-end-line="180" />
         </state>
       </provider>
     </entry>
@@ -692,26 +494,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
           <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/hobbies/hobbies.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2340">
-          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-          <folding>
-            <element signature="e#0#80#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -753,36 +535,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/work-experience.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/add-or-edit-work-experience-dialog/add-or-edit-work-experience-dialog.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2490">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
-          <folding>
-            <element signature="e#0#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/modules/public/services/students.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1039">
-          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/modules/auth/services/auth.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1039">
@@ -802,17 +554,143 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/angular.json">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="36" column="29" lean-forward="true" selection-start-line="36" selection-start-column="29" selection-end-line="36" selection-end-column="29" />
+        <state relative-caret-position="840">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/angular.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="41" column="31" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/public.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#270#430#0" expanded="true" />
+            <element signature="e#547#672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/send-email-dialog/send-email-dialog.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/hobbies/hobbies.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
+          <folding>
+            <element signature="e#0#80#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/student.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#48#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/work-experience.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/student/work-experience/add-or-edit-work-experience-dialog/add-or-edit-work-experience-dialog.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="104" lean-forward="true" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/services/students.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="538">
+          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/send-email-dialog/send-email-dialog.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/send-email-dialog/send-email-dialog.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/send-email-dialog/send-email-dialog.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
-          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+          <caret line="49" lean-forward="true" selection-start-line="49" selection-end-line="49" />
+          <folding>
+            <element signature="e#0#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/modules/public/components/students/students.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="117" column="3" lean-forward="true" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
