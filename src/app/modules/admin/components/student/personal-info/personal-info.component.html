@@ -1,17 +1,23 @@
-<div id="personalInfoComponent">
-  <!--  <h1>პირადი ინფორმაცია</h1>-->
+<div id="personal-info-component" *ngIf="userInfo">
 
+  <h1>პირადი ინფორმაცია</h1>
 
-  <div *ngIf="userInfo">
-    <mat-grid-list rowHeight="30vh" cols="4">
-      <mat-grid-tile class="sss" colspan="1" rowspan="1">
-        <img class="image" src="https://material.angular.io/assets/img/examples/shiba2.jpg">
-      </mat-grid-tile>
-      <mat-grid-tile class="info" colspan="3">
-        <p>{{userInfo.name}} {{userInfo.last_name}}</p>
-        <p>{{userInfo.email}}</p>
-        <input type="text" name="pid">
-      </mat-grid-tile>
-    </mat-grid-list>
+  <div>
+
+    <div class="main_image_div">
+      <img [src]="userInfo['image_base64']" alt="test" width="300">
+      <label for="file" class="btn-2">
+        <input class="image_upload" type="file" id="file" (change)="onFileUpload($event)"/>
+        <mat-icon>cloud_upload</mat-icon>
+      </label>
+    </div>
+
+    <div>
+      <p>მომხმარებლის სახელი: {{userInfo.name}} {{userInfo['last_name']}}</p>
+      <p>ელ.ფოსტა: {{userInfo['email']}}</p>
+<!--      <input type="text" name="pid">-->
+    </div>
+
   </div>
+
 </div>

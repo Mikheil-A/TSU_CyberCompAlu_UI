@@ -3,7 +3,8 @@
 
 <div id="student-grid-container" *ngIf="studentInfo">
 
-  <app-personal-info [userInfo]="studentInfo" [canEdit]="canEditTheProfile"></app-personal-info>
+  <app-personal-info [userInfo]="studentInfo" [canEdit]="canEditTheProfile"
+                     (onProfilePictureUpload)="fetchStudentInfo(studentId)"></app-personal-info>
 
   <app-hobbies [hobbiesStr]="studentInfo['hobby']"
                (onHobbiesChange)="fetchStudentInfo(studentId)"

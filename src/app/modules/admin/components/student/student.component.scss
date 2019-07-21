@@ -1,10 +1,11 @@
 #student-grid-container {
   display: grid;
   grid-template-areas: "personal-info personal-info personal-info" "hobbies work-experience work-experience" "hobbies portfolio portfolio";
-  grid-gap: 12px;
+  grid-gap: 20px;
 
-  & > div {
-    padding: 12px;
+  & > * {
+    padding: 30px;
+    box-shadow: 0 0 16px -6px rgba(0,0,0,1);
   }
 
   app-personal-info {
@@ -13,17 +14,17 @@
   }
 
   app-hobbies {
-    background-color: lightblue;
+    //background-color: lightblue;
     grid-area: hobbies;
   }
 
   app-work-experience {
-    background-color: green;
+    //background-color: green;
     grid-area: work-experience;
   }
 
   .portfolio {
-    background-color: purple;
+    //background-color: purple;
     grid-area: portfolio;
   }
 }

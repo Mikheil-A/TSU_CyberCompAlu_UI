@@ -53,4 +53,8 @@ export class StudentsService {
   sendMail(data: object) {
     return this._httpClient.post('/api/users/send_mail', data);
   }
+
+  uploadProfilePhoto(data: object){
+    return this._httpClient.put(`/api/users/${data['id']}`, data);
+  }
 }
