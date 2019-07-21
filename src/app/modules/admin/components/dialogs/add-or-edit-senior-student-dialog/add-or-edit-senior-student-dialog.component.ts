@@ -63,7 +63,7 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
       'birth_date': new FormControl(this._inputFieldsInitialValues.birth_date, Validators.required),
       'graduate_date': new FormControl(this._inputFieldsInitialValues.graduate_date, Validators.required),
       'profile_id': new FormControl(this._inputFieldsInitialValues.profile_id, Validators.required),
-      'employed': new FormControl(this._inputFieldsInitialValues.employed), // 1 admin, 2 - student
+      'employed': new FormControl(this._inputFieldsInitialValues.employed), // 1 student, 2 - admin
     });
   }
 

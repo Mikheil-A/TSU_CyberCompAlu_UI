@@ -9,7 +9,6 @@ import {MatSnackBarService} from "../../../shared/services/mat-snack-bar.service
 import {AuthService} from "../../../auth/services/auth.service";
 import {SelectionModel} from '@angular/cdk/collections';
 import {SendEmailDialogComponent} from "./send-email-dialog/send-email-dialog.component";
-import {AddOrEditWorkExperienceDialogComponent} from "../../../admin/components/student/work-experience/add-or-edit-work-experience-dialog/add-or-edit-work-experience-dialog.component";
 
 
 @Component({
@@ -74,13 +73,10 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     this._fetchGridData({});
   }
 
-
   private _determineAdmin(): void {
-    if (!this.authService.isLoggedIn) {
-      return;
-    }
-    this.isAdmin = JSON.parse(localStorage.getItem('userData')).profile_id === 2;
+    this.isAdmin = this.authService.isAdmin;
   }
+
 
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {

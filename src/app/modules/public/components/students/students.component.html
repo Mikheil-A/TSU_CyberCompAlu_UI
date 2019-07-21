@@ -35,7 +35,7 @@
         <button mat-button mat-icon-button
                 matTooltip="კურსდამთავრებულის დამატება"
                 (click)="openAddOrEditSeniorStudentDialog()"
-                [disabled]="!authService.isLoggedIn">
+                [disabled]="!isAdmin">
           <mat-icon>add_circle</mat-icon>
         </button>
       </div>
@@ -71,7 +71,7 @@
         <ng-container matColumnDef="full_name">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>სახელი, გვარი</th>
           <td mat-cell *matCellDef="let row">
-            <span [ngClass]="{'link': authService.isLoggedIn}" (click)="openStudentInfoSideNav(row.id)">
+            <span [ngClass]="{'link': isAdmin}" (click)="openStudentInfoSideNav(row.id)">
               {{row.full_name}}</span>
           </td>
         </ng-container>
@@ -92,13 +92,13 @@
             <button mat-button mat-icon-button
                     matTooltip="ჩასწორება"
                     (click)="openAddOrEditSeniorStudentDialog(row)"
-                    [disabled]="!authService.isLoggedIn">
+                    [disabled]="!isAdmin">
               <mat-icon>edit</mat-icon>
             </button>
             <button mat-button mat-icon-button
                     matTooltip="წაშლა"
                     (click)="openConfirmDeletionDialog(row.id)"
-                    [disabled]="!authService.isLoggedIn">
+                    [disabled]="!isAdmin">
               <mat-icon>delete</mat-icon>
             </button>
           </td>

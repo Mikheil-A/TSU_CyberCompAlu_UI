@@ -33,7 +33,7 @@ export class StudentsService {
   }
 
   getStudent(studentId: string) {
-    return this._httpClient.get(`/api/users/id=${studentId}/edit`).pipe(
+    return this._httpClient.get(`/api/users/${studentId}/edit`).pipe(
       catchError(this._authService.handleUnauthorizedError()) // TODO do it using interceptor to check in every http request!!!!!
     );
   }
