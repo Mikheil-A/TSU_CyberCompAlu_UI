@@ -27,7 +27,8 @@
         </button>
 
         <button mat-button mat-icon-button (click)="openSendEmailDialog()"
-                matTooltip="ელ. ფოსტის გაგზავნა">
+                matTooltip="ელ. ფოსტის გაგზავნა"
+                [disabled]="!isAdmin">
           <mat-icon>send</mat-icon>
         </button>
 
@@ -40,7 +41,7 @@
       </div>
 
       <table mat-table [dataSource]="dataSource" matSort (matSortChange)="onTableSort($event)"
-      *ngIf="dataSource">
+             *ngIf="dataSource">
 
         <!-- Checkbox Column -->
         <ng-container matColumnDef="checkboxSelect">
@@ -104,8 +105,7 @@
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
-            (click)="selection.toggle(row)"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
 
       <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" (page)="onPagingChange($event)"></mat-paginator>

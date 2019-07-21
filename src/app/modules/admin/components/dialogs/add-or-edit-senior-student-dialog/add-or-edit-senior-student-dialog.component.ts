@@ -22,8 +22,8 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
     'email': null,
     'birth_date': null,
     'graduate_date': null,
-    'profile_id': null,
-    'employed': null
+    'profile_id': 1,
+    'employed': false
   };
 
 

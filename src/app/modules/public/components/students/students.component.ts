@@ -27,6 +27,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   sidenavId: number = null;
   clickedStudentId: string;
   clickedStudentInfo: object;
+  isAdmin: boolean = false;
 
 
   displayedColumns: string[] = ['checkboxSelect', 'employed', 'full_name', 'startDate', 'graduate_date', 'editAndDeleteIcons'];
@@ -74,6 +75,13 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   }
 
 
+  private _determineAdmin(): void {
+    if (!this.authService.isLoggedIn) {
+      return;
+    }
+    this.isAdmin = JSON.parse(localStorage.getItem('userData')).profile_id === 2;
+  }
+
   /** Whether the number of selected elements matches the total number of rows. */
   isAllSelected() {
     const numSelected = this.selection.selected.length;
@@ -111,6 +119,8 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+
+      this._determineAdmin();
     }, () => {
     }, () => {
       this._ngxSpinnerService.hide();
