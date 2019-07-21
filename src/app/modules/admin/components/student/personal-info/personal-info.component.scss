@@ -1,0 +1,33 @@
+#personalInfoComponent {
+  background-color: #cccccc;
+  padding: 20px;
+  position: relative;
+  height: 33vh;
+  border: 2px solid;
+
+  .sss {
+    padding: 10px;
+    border: #cccccc 2px dashed;
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+
+  .info p {
+    display: block;
+  }
+
+  .image {
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+  }
+
+  .example-card {
+    width: 100%;
+  }
+
+  .mainDiv {
+    display: inline-block;
+  }
+}

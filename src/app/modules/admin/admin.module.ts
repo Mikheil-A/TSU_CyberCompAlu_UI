@@ -16,6 +16,8 @@ import {SharedModule} from "../shared/shared.module";
 // guards
 import {AdminGuard} from "./guards/admin.guard";
 
+import {MatGridListModule} from '@angular/material';
+
 
 
 @NgModule({
@@ -31,7 +33,7 @@ import {AdminGuard} from "./guards/admin.guard";
   ],
   imports: [
     AdminRoutingModule,
-
+    MatGridListModule,
     SharedModule
   ],
   providers: [

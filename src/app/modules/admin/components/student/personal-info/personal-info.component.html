@@ -1,11 +1,17 @@
-<h1>პირადი ინფორმაცია</h1>
+<div id="personalInfoComponent">
+  <!--  <h1>პირადი ინფორმაცია</h1>-->
 
 
-<div *ngIf="userInfo">
-
-  <img src="assets/images/header/user-profile-photo.png" height="60" width="60">
-  <p>{{userInfo.name}} {{userInfo.last_name}}</p>
-  <p>{{userInfo.email}}</p>
-  <input type="text" name="pid">
-
+  <div *ngIf="userInfo">
+    <mat-grid-list rowHeight="30vh" cols="4">
+      <mat-grid-tile class="sss" colspan="1" rowspan="1">
+        <img class="image" src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+      </mat-grid-tile>
+      <mat-grid-tile class="info" colspan="3">
+        <p>{{userInfo.name}} {{userInfo.last_name}}</p>
+        <p>{{userInfo.email}}</p>
+        <input type="text" name="pid">
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
 </div>
