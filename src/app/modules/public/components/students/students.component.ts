@@ -17,7 +17,7 @@ import {SendEmailDialogComponent} from "./send-email-dialog/send-email-dialog.co
   styleUrls: ['./students.component.scss'],
   providers: [
     // For overwriting/changing default properties of paginator
-    {provide: MatPaginatorIntl, useClass: StudentsComponent}
+    // {provide: MatPaginatorIntl, useClass: StudentsComponent}
   ]
 })
 export class StudentsComponent extends MatPaginatorIntl implements OnInit {
@@ -34,22 +34,23 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   selection = new SelectionModel(true, []);
 
 
-  private _gridFilterData: object = {
+  gridFilterData: object = {
     // paginator
     page: 1,
-    limit: 10,
+    limit: 5,
 
     // sorting
     property: 'created_at',
-    direction: 'acs', // desc
+    direction: 'asc', // desc
 
-    isEmployed: null, // true/false
+    is_employed: null, // true/false
 
-    startDate: null, // milliseconds
-    endDate: null, // milliseconds
+    start_date: null, // milliseconds
+    end_date: null, // milliseconds
 
     input: '' // string, searches in full name
   };
+  tableLength: number = null;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -63,14 +64,14 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
               public authService: AuthService) {
     super();
 
-    this._setPaginatorInGeorgian();
+    // this._setPaginatorInGeorgian();
 
     // this.dataSource = new MatTableDataSource(this._studentsMock.students);
   }
 
   ngOnInit() {
-    // this._fetchGridData(this._gridFilterData);
-    this._fetchGridData({});
+    this._fetchGridData(this.gridFilterData);
+    // this._fetchGridData({});
   }
 
   private _determineAdmin(): void {
@@ -100,21 +101,26 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     return `${this.selection.isSelected(row) ? 'deselect' : 'select'} row ${row.position + 1}`;
   }
 
-  private _setPaginatorInGeorgian() {
-    // Overwriting default properties of paginator
-    this.itemsPerPageLabel = 'ჩანაწერების რაოდენობა გვერდზე:';
-    this.nextPageLabel = 'შემდეგი გვერდი';
-    this.previousPageLabel = 'წინა გვერდი';
-  }
+  // private _setPaginatorInGeorgian() {
+  //   // Overwriting default properties of paginator
+  //   this.itemsPerPageLabel = 'ჩანაწერების რაოდენობა გვერდზე:';
+  //   this.nextPageLabel = 'შემდეგი გვერდი';
+  //   this.previousPageLabel = 'წინა გვერდი';
+  // }
 
   private _fetchGridData(filterByData: object) {
     this._ngxSpinnerService.show();
 
     this._studentsService.search(filterByData).subscribe((res) => {
-      this.dataSource = new MatTableDataSource(res['data']);
+      this.dataSource = new MatTableDataSource(res['data'].users);
 
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
+
+      this.gridFilterData['limit']= res['data'].limit;
+      this.tableLength = res['data'].length;
+
+      console.log(this.tableLength);
 
       this._determineAdmin();
     }, () => {
@@ -203,25 +209,25 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   reFetchFilteredGrid(e) {
     this._sidenav.close();
 
-    this._gridFilterData['isEmployed'] = e.isEmployed;
-    this._gridFilterData['startDate'] = e.startDate;
-    this._gridFilterData['endDate'] = e.endDate;
+    this.gridFilterData['is_employed'] = e.isEmployed;
+    this.gridFilterData['start_date'] = e.startDate;
+    this.gridFilterData['end_date'] = e.endDate;
 
-    this._fetchGridData(e);
+    this._fetchGridData(this.gridFilterData);
   }
 
   onPagingChange(e) {
     console.log(e);
-    this._gridFilterData['page'] = e.pageIndex + 1;
-    this._gridFilterData['limit'] = e.pageSize;
+    this.gridFilterData['page'] = e.pageIndex + 1;
+    this.gridFilterData['limit'] = e.pageSize;
 
-    this._fetchGridData(this._gridFilterData); // FIXME backend not working
+    this._fetchGridData(this.gridFilterData); // FIXME backend not working
   }
 
   onTableSort(e) {
-    this._gridFilterData['property'] = e.active;
-    this._gridFilterData['direction'] = e.direction;
+    this.gridFilterData['property'] = e.active;
+    this.gridFilterData['direction'] = e.direction;
 
-    this._fetchGridData(this._gridFilterData);
+    this._fetchGridData(this.gridFilterData);
   }
 }

@@ -37,6 +37,18 @@ mat-sidenav-container {
       color: #bb0000;
     }
 
+    .editButton:disabled {
+      color: #a4a4a4
+    }
+
+    .addButton:disabled {
+      color: #a4a4a4
+    }
+
+    .deleteButton:disabled {
+      color: #a4a4a4
+    }
+
     margin: 0 60px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, .1);
 
