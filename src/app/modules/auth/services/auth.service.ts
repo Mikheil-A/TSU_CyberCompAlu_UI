@@ -79,4 +79,11 @@ export class AuthService {
   get isLoggedIn(): boolean {
     return localStorage.getItem('access_token') ? true : false;
   }
+
+  get isAdmin(): boolean {
+    if (!this.isLoggedIn) {
+      return;
+    }
+    return JSON.parse(localStorage.getItem('userData')).profile_id === 2;
+  }
 }

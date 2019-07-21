@@ -26,6 +26,18 @@
       <mat-datepicker #birthDatePicker></mat-datepicker>
     </mat-form-field>
 
+    <div style="grid-area: applyDate; display: flex; flex-direction: column">
+      <label>უნივერსიტეტის დაწყების თარიღი</label>
+      <mat-form-field appearance="outline">
+        <input formControlName="apply_date" matInput [matDatepicker]="applyDatePicker"
+               placeholder="უნივერსიტეტის დაწყების თარიღი">
+        <mat-datepicker-toggle matSuffix [for]="applyDatePicker">
+          <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+        </mat-datepicker-toggle>
+        <mat-datepicker #applyDatePicker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
     <div style="grid-area: graduateDate; display: flex; flex-direction: column">
       <label>უნივერსიტეტის დამთავრების თარიღი</label>
       <mat-form-field appearance="outline">
