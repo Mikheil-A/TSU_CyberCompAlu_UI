@@ -2,33 +2,29 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 
 import {AppRoutingModule} from './app-routing.module';
+
 import {AppComponent} from './app.component';
-import {HeaderComponent} from './components/shared/header/header.component';
-import {AuthenticationComponent} from './components/authentication/authentication.component';
-import {SignInComponent} from './components/authentication/sign-in/sign-in.component';
 
+import {AuthModule} from "./modules/auth/auth.module";
+import {AdminModule} from "./modules/admin/admin.module";
+import {PublicModule} from "./modules/public/public.module";
+import {SharedModule} from "./modules/shared/shared.module";
 
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    AuthenticationComponent,
-    SignInComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
 
-    BrowserAnimationsModule,
-    MatButtonModule,
-    MatTooltipModule
+    AuthModule,
+    AdminModule,
+    PublicModule,
+    SharedModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

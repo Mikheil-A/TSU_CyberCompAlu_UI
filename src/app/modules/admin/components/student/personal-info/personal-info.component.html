@@ -1,0 +1,11 @@
+<h1>პირადი ინფორმაცია</h1>
+
+
+<div *ngIf="userInfo">
+
+  <img src="assets/images/header/user-profile-photo.png" height="60" width="60">
+  <p>{{userInfo.name}} {{userInfo.last_name}}</p>
+  <p>{{userInfo.email}}</p>
+  <input type="text" name="pid">
+
+</div>
