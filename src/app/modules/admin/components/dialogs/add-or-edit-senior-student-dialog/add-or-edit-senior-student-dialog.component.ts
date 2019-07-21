@@ -4,7 +4,6 @@ import {StudentsService} from "../../../../public/services/students.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 
-
 @Component({
   selector: 'app-add-or-edit-senior-student-dialog',
   templateUrl: './add-or-edit-senior-student-dialog.component.html',
@@ -21,6 +20,7 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
     'last_name': null,
     'email': null,
     'birth_date': null,
+    'apply_date': null,
     'graduate_date': null,
     'profile_id': 1,
     'employed': false
@@ -50,6 +50,7 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
     this._inputFieldsInitialValues.last_name = this._clickedStudentData.last_name;
     this._inputFieldsInitialValues.email = this._clickedStudentData.email;
     this._inputFieldsInitialValues.birth_date = this._clickedStudentData.birth_date;
+    this._inputFieldsInitialValues.apply_date = this._clickedStudentData.apply_date;
     this._inputFieldsInitialValues.graduate_date = this._clickedStudentData.graduate_date;
     this._inputFieldsInitialValues.profile_id = this._clickedStudentData.profile_id;
     this._inputFieldsInitialValues.employed = this._clickedStudentData.employed;
@@ -61,6 +62,7 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
       'last_name': new FormControl(this._inputFieldsInitialValues.last_name, Validators.required),
       'email': new FormControl(this._inputFieldsInitialValues.email, [Validators.required, Validators.email]),
       'birth_date': new FormControl(this._inputFieldsInitialValues.birth_date, Validators.required),
+      'apply_date': new FormControl(this._inputFieldsInitialValues.apply_date, Validators.required),
       'graduate_date': new FormControl(this._inputFieldsInitialValues.graduate_date, Validators.required),
       'profile_id': new FormControl(this._inputFieldsInitialValues.profile_id, Validators.required),
       'employed': new FormControl(this._inputFieldsInitialValues.employed), // 1 student, 2 - admin
@@ -79,6 +81,7 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
       "username": "zuria12",
       "birth_date": "25-01-1997",
       "profile_id": 1,
+      'apply_date': new Date(),
       'graduate_date': new Date(),
       'employed': true
     };
@@ -94,11 +97,14 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
       if (this._clickedStudentData) {
         // if the dialog is in editing mode
         requestData['id'] = this._clickedStudentData.id;
+        this._studentsService.update(requestData).subscribe(() => {
+          this.closeDialog(true);
+        });
+      } else {
+        this._studentsService.add(requestData).subscribe(() => {
+          this.closeDialog(true);
+        });
       }
-
-      this._studentsService.addOrUpdate(requestData).subscribe(() => {
-        this.closeDialog(true);
-      });
     }
   }
 }

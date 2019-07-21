@@ -29,7 +29,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   isAdmin: boolean = false;
 
 
-  displayedColumns: string[] = ['checkboxSelect', 'employed', 'full_name', 'startDate', 'graduate_date', 'editAndDeleteIcons'];
+  displayedColumns: string[] = ['checkboxSelect', 'employed', 'full_name', 'apply_date', 'graduate_date', 'editAndDeleteIcons'];
   dataSource: MatTableDataSource<any>;
   selection = new SelectionModel(true, []);
 

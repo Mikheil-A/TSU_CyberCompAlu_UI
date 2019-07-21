@@ -24,8 +24,12 @@ export class StudentsService {
     return this._httpClient.post('/api/users/list', data);
   }
 
-  addOrUpdate(data: object) {
+  add(data: object) {
     return this._httpClient.post('/api/users', data);
+  }
+
+  update(data: object) {
+    return this._httpClient.put(`/api/users/${data['id']}`, data);
   }
 
   delete(studentId: number) {
