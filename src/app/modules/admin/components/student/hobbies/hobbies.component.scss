@@ -23,6 +23,34 @@
   font-size: 14px;
 }
 
+.deleteButton {
+  color: #f63636;
+}
+
+.deleteButton:hover {
+  color: #bb0000;
+}
+
+.addButton {
+  color: #407d41;
+}
+
+.addButton {
+  color: green;
+}
+
+.input {
+  background-color: rgb(255, 255, 255);
+}
+
+.addButton:disabled {
+  color: #a4a4a4
+}
+
+.deleteButton:disabled {
+  color: #a4a4a4
+}
+
 .cdk-drag-preview {
   box-sizing: border-box;
   border-radius: 4px;

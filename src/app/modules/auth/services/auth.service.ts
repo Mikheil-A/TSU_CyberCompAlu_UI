@@ -5,7 +5,6 @@ import {Router} from "@angular/router";
 import {throwError} from "rxjs";
 
 
-
 @Injectable()
 export class AuthService {
 
@@ -84,6 +83,15 @@ export class AuthService {
     if (!this.isLoggedIn) {
       return;
     }
-    return JSON.parse(localStorage.getItem('userData')).profile_id === 2;
+    let profile = JSON.parse(localStorage.getItem('userData'))
+    if (!profile) {
+      setTimeout(() => {
+        profile = JSON.parse(localStorage.getItem('userData'))
+      }, 750);
+      if (profile)
+        return profile.profile_id === 2;
+    } else {
+      return profile.profile_id === 2;
+    }
   }
 }

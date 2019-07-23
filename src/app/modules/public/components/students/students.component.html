@@ -97,7 +97,7 @@
                     matTooltip="ჩასწორება"
                     class="editButton"
                     (click)="openAddOrEditSeniorStudentDialog(row)"
-                     [disabled]="!isAdmin">
+                    [disabled]="!isAdmin">
               <mat-icon>edit</mat-icon>
             </button>
             <button mat-button mat-icon-button
@@ -116,7 +116,7 @@
 
       <mat-paginator [length]="tableLength"
                      [pageSize]="gridFilterData['limit']"
-                     [pageSizeOptions]="[2, 5, 10, 25, 100]"
+                     [pageSizeOptions]="[5, 10, 25, 100]"
                      (page)="onPagingChange($event)"
       ></mat-paginator>
     </div>

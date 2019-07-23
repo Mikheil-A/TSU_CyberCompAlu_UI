@@ -3,6 +3,7 @@
 
   <button mat-button mat-icon-button
           matTooltip="დამატება"
+          class="addButton"
           (click)="openAddOrEditWorkExperienceDialog(null)"
           [disabled]="!canEdit">
     <mat-icon>add</mat-icon>
@@ -28,12 +29,14 @@
       <div>
         <button mat-button mat-icon-button
                 matTooltip="ჩასწორება"
+                class="editButton"
                 (click)="openAddOrEditWorkExperienceDialog(workExperience)"
                 [disabled]="!canEdit">
           <mat-icon>edit</mat-icon>
         </button>
         <button mat-button mat-icon-button
                 matTooltip="წაშლა"
+                class="deleteButton"
                 (click)="openConfirmDeletionDialog(workExperience)"
                 [disabled]="!canEdit">
           <mat-icon>delete</mat-icon>

@@ -40,8 +40,8 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     limit: 5,
 
     // sorting
-    property: 'created_at',
-    direction: 'asc', // desc
+    // property: 'created_at',
+    // direction: 'desc', // asc
 
     is_employed: null, // true/false
 
@@ -117,7 +117,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
       this.dataSource.paginator = this.paginator;
       this.dataSource.sort = this.sort;
 
-      this.gridFilterData['limit']= res['data'].limit;
+      this.gridFilterData['limit'] = res['data'].limit;
       this.tableLength = res['data'].length;
 
       console.log(this.tableLength);
@@ -135,7 +135,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     });
 
     const sendSubscription = dialogRef.componentInstance.onSend.subscribe(() => {
-      this._fetchGridData({});
+      this._fetchGridData({property: 'created_at'});
       this._matSnackBarService.openSnackBar('ელ. ფოსტა წარმატებით გაიგზავნა ');
     });
 

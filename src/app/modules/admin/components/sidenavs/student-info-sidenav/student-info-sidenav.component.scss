@@ -1,5 +1,5 @@
 header {
-  background-color: #f0f0f7;
+  background-color: #0072bb;
   box-shadow: 0 1px 0 #e0e0e0;
   display: flex;
   flex-direction: row;
@@ -11,4 +11,26 @@ header {
     margin-left: 60px;
     color: gray;
   }
+}
+
+.imageDiv {
+  width: 100%;
+  background-color: #3b5f8c;
+}
+
+.main {
+  height: 100vh;
+  background-color: #5b90d6;
+}
+
+.maindiv {
+  overflow-x: hidden;
+}
+
+.image {
+  width: 60%;
+  margin: 20px 20%;
+  border: #cccccc dashed 1px;
+  padding: 15px;
+  background-color: #5b90d6;
 }

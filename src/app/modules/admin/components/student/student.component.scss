@@ -9,22 +9,28 @@
   }
 
   app-personal-info {
-    //background-color: orange;
+    background-color: rgba(2, 114, 187, .4);
     grid-area: personal-info;
     box-shadow: inset 0 0 30px 6px rgba(0,0,0,0.75);
   }
 
   app-hobbies {
     //background-color: lightblue;
+    background-color: rgba(2, 114, 187, .45);
+
     grid-area: hobbies;
   }
 
   app-work-experience {
+    background-color: rgba(2, 114, 187, .45);
+
     //background-color: green;
     grid-area: work-experience;
   }
 
   .portfolio {
+    background-color: rgba(2, 114, 187, .45);
+
     //background-color: purple;
     grid-area: portfolio;
   }
