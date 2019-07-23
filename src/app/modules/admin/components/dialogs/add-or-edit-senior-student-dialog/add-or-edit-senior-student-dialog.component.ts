@@ -22,8 +22,8 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
     'email': null,
     'birth_date': null,
     'graduate_date': null,
-    'profile_id': null,
-    'employed': null
+    'profile_id': 1,
+    'employed': false
   };
 
 
@@ -71,17 +71,37 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
     this._matDialogRef.close(wasAStudentAdded);
   }
 
+
+  /** #TUTORIAL:
+   * Check for valid form controls
+   * Finding out which controls are invalid in angular reactive forms:
+   * "How to find the invalid controls in angular 4 reactive form - Stack Overflow":
+   * https://stackoverflow.com/questions/45220073/how-to-find-the-invalid-controls-in-angular-4-reactive-form
+   */
+  private _findInvalidControls() {
+    const invalid = [];
+    const controls = this.formGroup.controls;
+    for (const name in controls) {
+      if (controls[name].invalid) {
+        invalid.push(name);
+      }
+    }
+    return invalid;
+  }
+
   save() {
-    const tempRequestData = {
-      "email": "dunkman032@gmail.com",
-      "name": "zuri123",
-      "last_name": "123",
-      "username": "zuria12",
-      "birth_date": "25-01-1997",
-      "profile_id": 1,
-      'graduate_date': new Date(),
-      'employed': true
-    };
+    console.log('invalid controls: ', this._findInvalidControls());
+
+    // const tempRequestData = {
+    //   "email": "dunkman032@gmail.com",
+    //   "name": "zuri123",
+    //   "last_name": "123",
+    //   "username": "zuria12",
+    //   "birth_date": "25-01-1997",
+    //   "profile_id": 1,
+    //   'graduate_date': new Date(),
+    //   'employed': true
+    // };
 
     // this._studentsService.addOrUpdate(tempRequestData).subscribe((res) => {
     //   this.closeDialog(true);
