@@ -5,7 +5,7 @@
 
     <a [routerLink]="'/student/' + studentId" target="_blank"
        matTooltip="ახალ ტაბში გახსნა">
-      <mat-icon>open_in_new</mat-icon>
+      <mat-icon color="accent">open_in_new</mat-icon>
     </a>
   </header>
 
@@ -13,6 +13,7 @@
     <div class="imageDiv">
       <img class="image" [src]="studentInfo['image_base64']" alt="პროფილის სურათი"/>
     </div>
+    <hr/>
     <ul>
       <li>ელ. მისამართი: {{studentInfo.email}}</li>
       <li>დასაქმების სტატუსი: {{studentInfo.employed? 'დასაქმებულია' : 'არ არის დასაქმებული'}}</li>

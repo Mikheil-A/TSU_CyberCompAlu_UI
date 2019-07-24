@@ -152,7 +152,7 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
-
+//TODO ურექვესთოდ
   openStudentInfoSideNav(id: string) {
     if (this.authService.isLoggedIn) {
       this.sidenavId = 1;
