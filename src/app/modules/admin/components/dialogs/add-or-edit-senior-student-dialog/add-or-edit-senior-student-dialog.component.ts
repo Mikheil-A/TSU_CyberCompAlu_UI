@@ -36,7 +36,6 @@ export class AddOrEditSeniorStudentDialogComponent implements OnInit {
   ngOnInit() {
     if (this._clickedStudentData) {
       this._setDialogToEditingMode();
-      console.log(this._clickedStudentData);
     }
     this._initializeForm();
   }

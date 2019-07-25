@@ -64,6 +64,10 @@ mat-sidenav-container {
       }
     }
 
+    mat-sidenav-content {
+      overflow: hidden;
+    }
+
     table {
       width: 100%;
 

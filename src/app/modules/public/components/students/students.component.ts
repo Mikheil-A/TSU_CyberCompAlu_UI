@@ -9,6 +9,7 @@ import {MatSnackBarService} from "../../../shared/services/mat-snack-bar.service
 import {AuthService} from "../../../auth/services/auth.service";
 import {SelectionModel} from '@angular/cdk/collections';
 import {SendEmailDialogComponent} from "./send-email-dialog/send-email-dialog.component";
+import {PageEvent} from '@angular/material/paginator';
 
 
 @Component({
@@ -28,10 +29,19 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   clickedStudentInfo: object;
   isAdmin: boolean = false;
 
+  enteredUserId: number;
+
+  admin = false;
+
 
   displayedColumns: string[] = ['checkboxSelect', 'employed', 'full_name', 'apply_date', 'graduate_date', 'editAndDeleteIcons'];
   dataSource: MatTableDataSource<any>;
   selection = new SelectionModel(true, []);
+
+  // MatPaginator Inputs
+  length = 100;
+  pageSize = 5;
+  pageSizeOptions: number[] = [5, 10, 25, 100];
 
 
   gridFilterData: object = {
@@ -61,17 +71,17 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
               private _studentsMock: StudentsMock,
               private _studentsService: StudentsService,
               private _matSnackBarService: MatSnackBarService,
+              private pageEvent: PageEvent,
               public authService: AuthService) {
     super();
-
     // this._setPaginatorInGeorgian();
-
     // this.dataSource = new MatTableDataSource(this._studentsMock.students);
   }
 
   ngOnInit() {
     this._fetchGridData(this.gridFilterData);
     // this._fetchGridData({});
+    this.enteredUserId = parseInt(localStorage.getItem('user_id'))
   }
 
   private _determineAdmin(): void {
@@ -84,6 +94,10 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     const numSelected = this.selection.selected.length;
     const numRows = this.dataSource.data.length;
     return numSelected === numRows;
+  }
+
+  isDisabled (id) {
+    return id === this.enteredUserId
   }
 
   /** Selects all rows if they are not all selected; otherwise clear selection. */
@@ -110,17 +124,32 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
 
   private _fetchGridData(filterByData: object) {
     this._ngxSpinnerService.show();
+    if (!filterByData['page']) {
+      filterByData['page'] = 1
+    }
+    if (!filterByData['limit']) {
+      filterByData['limit'] = 5
+    }
+
+    if (this.admin) {
+      this.displayedColumns = ['checkboxSelect', 'full_name', 'birth_date', 'editAndDeleteIcons'];
+    } else {
+      this.displayedColumns = ['checkboxSelect', 'employed', 'full_name', 'apply_date', 'graduate_date', 'editAndDeleteIcons'];
+    }
+
+    filterByData['admin'] = this.admin
 
     this._studentsService.search(filterByData).subscribe((res) => {
-      this.dataSource = new MatTableDataSource(res['data'].users);
+      const data = res['data'];
+      this.dataSource = new MatTableDataSource(data.users);
 
-      this.dataSource.paginator = this.paginator;
+      // this.dataSource.paginator = this.paginator;
+
       this.dataSource.sort = this.sort;
-
+      this.length = data.length;
+      this.pageSize = data.limit;
       this.gridFilterData['limit'] = res['data'].limit;
       this.tableLength = res['data'].length;
-
-      console.log(this.tableLength);
 
       this._determineAdmin();
     }, () => {
@@ -152,13 +181,12 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
       this.dataSource.paginator.firstPage();
     }
   }
+
 //TODO ურექვესთოდ
   openStudentInfoSideNav(id: string) {
-    if (this.authService.isLoggedIn) {
+    if (this.authService.isLoggedIn && (this.isDisabled(id) || this.isAdmin)) {
       this.sidenavId = 1;
       this.clickedStudentId = id;
-      console.log('zpooroor');
-      // fetch clicked student info
       this._studentsService.getStudent(this.clickedStudentId).subscribe(res => {
         this.clickedStudentInfo = res['data'];
         this._sidenav.open();
@@ -217,8 +245,8 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
   }
 
   onPagingChange(e) {
-    console.log(e);
     this.gridFilterData['page'] = e.pageIndex + 1;
+
     this.gridFilterData['limit'] = e.pageSize;
 
     this._fetchGridData(this.gridFilterData); // FIXME backend not working

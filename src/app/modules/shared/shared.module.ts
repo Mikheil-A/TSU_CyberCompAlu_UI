@@ -10,6 +10,8 @@ import {MatSnackBarService} from "./services/mat-snack-bar.service";
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import {TokenInterceptor} from "./interceptors/token.interceptor";
 
+import {PageEvent} from "@angular/material";
+
 // components
 import {HeaderComponent} from "./components/header/header.component";
 import {FooterComponent} from './components/footer/footer.component';
@@ -20,7 +22,6 @@ import {ConfirmDeletionDialogComponent} from "./components/dialogs/confirm-delet
 
 import {MatModule} from "../mat/mat.module";
 import {NgxSpinnerModule} from "ngx-spinner";
-
 
 
 @NgModule({
@@ -47,7 +48,7 @@ import {NgxSpinnerModule} from "ngx-spinner";
     BrowserModule,
     HttpClientModule,
     MatModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
   ],
   exports: [
     // modules
@@ -67,7 +68,7 @@ import {NgxSpinnerModule} from "ngx-spinner";
   providers: [
     // Passing authorization token into every HttpClient request vie HttpOptions headers
     {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
-
+    PageEvent,
     MatSnackBarService
   ]
 })

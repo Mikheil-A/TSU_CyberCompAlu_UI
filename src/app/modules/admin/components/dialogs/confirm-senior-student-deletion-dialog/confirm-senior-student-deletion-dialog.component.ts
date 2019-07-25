@@ -26,7 +26,6 @@ export class ConfirmSeniorStudentDeletionDialogComponent implements OnInit {
 
   delete() {
     this._studentsService.delete(this._receivedData).subscribe((res) => {
-      console.log(res);
       this.closeDialog(true);
     });
   }

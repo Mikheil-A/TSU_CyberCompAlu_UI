@@ -4,8 +4,9 @@
                [fixedInViewport]="true"
                [autoFocus]="false" [disableClose]="false">
 
-    <app-student-info-sidenav *ngIf="sidenavId === 1" [studentId]="clickedStudentId"
-                              [studentInfo]="clickedStudentInfo"></app-student-info-sidenav>
+    <app-student-info-sidenav
+      *ngIf="sidenavId === 1" [studentId]="clickedStudentId" [studentInfo]="clickedStudentInfo">
+    </app-student-info-sidenav>
 
     <app-filter-grid-sidenav *ngIf="sidenavId === 2" (onFilter)="reFetchFilteredGrid($event)"></app-filter-grid-sidenav>
 
@@ -22,8 +23,13 @@
           <input matInput (keyup)="applyFilter($event.target['value'])" placeholder="მოძებნეთ სახლი გვარი...">
         </mat-form-field>
 
-        <button mat-button mat-icon-button (click)="openFilterGridSidenav()">
+
+        <button  mat-button mat-icon-button (click)="openFilterGridSidenav()">
           <mat-icon color="primary">filter_list</mat-icon>
+        </button>
+
+        <button *ngIf="isAdmin" mat-button mat-icon-button matTooltip="ადმინთა სია">
+          <mat-checkbox (change)="_fetchGridData({})" class="example-margin" [(ngModel)]="admin"></mat-checkbox>
         </button>
 
         <button mat-button mat-icon-button
@@ -33,6 +39,7 @@
                 [disabled]="!isAdmin">
           <mat-icon>mail_outline</mat-icon>
         </button>
+
 
         <button mat-button mat-icon-button
                 class="addButton"
@@ -64,7 +71,7 @@
           </td>
         </ng-container>
 
-        <ng-container matColumnDef="employed">
+        <ng-container *ngIf="!admin" matColumnDef="employed">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>დასაქმების სტატუსი</th>
           <td mat-cell *matCellDef="let row">
             <mat-icon color="primary" *ngIf="row.employed">done_outline</mat-icon>
@@ -75,17 +82,23 @@
         <ng-container matColumnDef="full_name">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>სახელი, გვარი</th>
           <td mat-cell *matCellDef="let row">
-            <span [ngClass]="{'link': isAdmin}" (click)="openStudentInfoSideNav(row.id)">
+            <span [ngClass]="{'link': isAdmin || isDisabled(row.id)}" (click)="openStudentInfoSideNav(row.id)">
               {{row.full_name}}</span>
           </td>
         </ng-container>
+        <ng-container *ngIf="admin" matColumnDef="birth_date">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>დაბადების თარიღი</th>
+          <td mat-cell *matCellDef="let row">
+            <span>{{row.birth_date}}</span>
+          </td>
+        </ng-container>
 
-        <ng-container matColumnDef="apply_date">
+        <ng-container *ngIf="!admin" matColumnDef="apply_date">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>დასაწყისი</th>
           <td mat-cell *matCellDef="let row"> {{row.apply_date}}</td>
         </ng-container>
 
-        <ng-container matColumnDef="graduate_date">
+        <ng-container *ngIf="!admin" matColumnDef="graduate_date">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>დასასრული</th>
           <td mat-cell *matCellDef="let row"> {{row.graduate_date}}</td>
         </ng-container>
@@ -97,14 +110,14 @@
                     matTooltip="ჩასწორება"
                     class="editButton"
                     (click)="openAddOrEditSeniorStudentDialog(row)"
-                    [disabled]="!isAdmin">
+                    [disabled]="!isAdmin && !isDisabled(row.id)">
               <mat-icon>edit</mat-icon>
             </button>
             <button mat-button mat-icon-button
                     class="deleteButton"
                     matTooltip="წაშლა"
                     (click)="openConfirmDeletionDialog(row.id)"
-                    [disabled]="!isAdmin">
+                    [disabled]="!isAdmin && !isDisabled(row.id)">
               <mat-icon>delete</mat-icon>
             </button>
           </td>
@@ -114,15 +127,16 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
 
-      <mat-paginator [length]="tableLength"
-                     [pageSize]="gridFilterData['limit']"
-                     [pageSizeOptions]="[5, 10, 25, 100]"
-                     (page)="onPagingChange($event)"
-      ></mat-paginator>
+      <mat-paginator [length]="length"
+                     [pageSize]="pageSize"
+                     [pageSizeOptions]="pageSizeOptions"
+                     (page)="onPagingChange($event)">
+      </mat-paginator>
+
     </div>
 
 
-    <!--<app-footer></app-footer>-->
+    <app-footer></app-footer>
 
   </mat-sidenav-content>
 </mat-sidenav-container>
