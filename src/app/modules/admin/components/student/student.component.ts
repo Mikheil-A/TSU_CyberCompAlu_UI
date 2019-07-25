@@ -23,6 +23,7 @@ export class StudentComponent implements OnInit {
   }
 
   ngOnInit() {
+    // a user can only edit their profile
     this.canEditTheProfile = this.studentId == JSON.parse(localStorage.getItem('userData')).id;
     this.fetchStudentInfo(this.studentId);
   }
