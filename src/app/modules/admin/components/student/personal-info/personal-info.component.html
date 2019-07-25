@@ -5,7 +5,7 @@
   <div>
 
     <div class="main_image_div">
-      <img [src]="userInfo['image_base64']" alt="test" width="300">
+      <img [src]="userInfo['image_base64'] || '../../../../../../assets/images/icon-student.png'" alt="test" width="300">
       <label for="file" class="btn-2">
         <input class="image_upload" type="file" id="file" (change)="onFileUpload($event)"/>
         <mat-icon>cloud_upload</mat-icon>

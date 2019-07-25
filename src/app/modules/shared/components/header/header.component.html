@@ -10,8 +10,9 @@
       <div id="user">
 
         <p id="greetings">მოგესალმებით <span
-          id="username">{{loggedInUserData.name}} {{loggedInUserData.last_name}}</span></p>
-        <img [src]="loggedInUserData['image_base64']" height="41" width="41">
+          id="username">{{loggedInUserData.name}} {{loggedInUserData['last_name']}}</span></p>
+        <img [src]="loggedInUserData['image_base64'] || '../../../../../assets/images/icon-student.png'" height="41"
+             width="41">
 
         <button mat-button mat-icon-button [matMenuTriggerFor]="menu">
           <mat-icon>arrow_drop_down</mat-icon>
