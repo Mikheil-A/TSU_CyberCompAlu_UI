@@ -30,6 +30,9 @@ export class FilterGridSidenavComponent implements OnInit {
     });
   }
 
+  print () {
+    console.log(this.filterDataFormGroup);
+  }
 
   load() {
     if (this.filterDataFormGroup.touched && this.filterDataFormGroup.valid) {
