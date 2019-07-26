@@ -136,7 +136,6 @@ export class StudentsComponent extends MatPaginatorIntl implements OnInit {
     } else {
       this.displayedColumns = ['checkboxSelect', 'employed', 'full_name', 'apply_date', 'graduate_date', 'editAndDeleteIcons'];
     }
-
     filterByData['admin'] = this.admin
 
     this._studentsService.search(filterByData).subscribe((res) => {
