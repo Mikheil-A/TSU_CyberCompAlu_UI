@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2efbfc4-bafb-4cd5-b348-c7db3cbd7700" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/admin/components/dialogs/add-or-edit-senior-student-dialog/add-or-edit-senior-student-dialog.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/admin/components/dialogs/confirm-senior-student-deletion-dialog/confirm-senior-student-deletion-dialog.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/shared/components/dialogs/confirm-deletion-dialog/confirm-deletion-dialog.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/shared/components/dialogs/confirm-deletion-dialog/confirm-deletion-dialog.component.ts" afterDir="false" />
-    </list>
+    <list default="true" id="a2efbfc4-bafb-4cd5-b348-c7db3cbd7700" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -414,7 +409,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="204909000" />
+    <option name="totallyTimeSpent" value="206132000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -444,7 +439,7 @@
       <window_info anchor="bottom" auto_hide="true" id="TODO" order="6" sideWeight="0.49960032" weight="0.5589198" />
       <window_info anchor="bottom" auto_hide="true" id="Version Control" order="7" sideWeight="0.49960032" weight="0.68330604" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50519586" side_tool="true" weight="0.5695067" />
-      <window_info active="true" anchor="bottom" auto_hide="true" id="Terminal" order="9" sideWeight="0.49480414" visible="true" weight="0.6816694" />
+      <window_info active="true" anchor="bottom" auto_hide="true" id="Terminal" order="9" sideWeight="0.49480414" visible="true" weight="0.7225859" />
       <window_info anchor="bottom" auto_hide="true" id="TypeScript" order="10" weight="0.42716858" />
       <window_info anchor="bottom" id="Docker" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
