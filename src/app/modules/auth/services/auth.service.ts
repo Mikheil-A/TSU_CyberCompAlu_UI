@@ -25,13 +25,13 @@ export class AuthService {
 
     // requestData = {
     //   "email": "giorgi.nikolaishvili25@gmail.com",
-    //   "password": "gigi25" || "123456"
+    //   "password": "gigi25"
     // };
 
     return this._httpClient.post('/api/auth/login', requestData, options).pipe(
       map(res => {
         if (res['status'] === 200) {
-          this.saveUserSessionData(res['body'].token, res['body'].user_id);
+          this.saveUserSessionData(res['body'].token, res['body'].user_id, res['body']);
           return res['body'];
         }
       }),
@@ -68,6 +68,9 @@ export class AuthService {
     }
     if (loggedInUserData) {
       localStorage.setItem('userData', JSON.stringify(loggedInUserData));
+      if (loggedInUserData['profile']) {
+        localStorage.setItem('profile_id', JSON.stringify(loggedInUserData['profile'].id));
+      }
     }
   }
 
@@ -83,15 +86,8 @@ export class AuthService {
     if (!this.isLoggedIn) {
       return;
     }
-    let profile = JSON.parse(localStorage.getItem('userData'))
-    if (!profile) {
-      setTimeout(() => {
-        profile = JSON.parse(localStorage.getItem('userData'))
-      }, 750);
-      if (profile)
-        return profile.profile_id === 2;
-    } else {
-      return profile.profile_id === 2;
-    }
+    let profile = JSON.parse(localStorage.getItem('profile_id'));
+    // let profile = JSON.parse(localStorage.getItem('userData'))
+    return profile === 2; // if profile_id is 2, it's admin
   }
 }
