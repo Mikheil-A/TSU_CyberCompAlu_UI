@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Inject} from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material";
+import {StudentsService} from "../../../../public/services/students.service";
 
 
 
@@ -13,7 +14,8 @@ export class ConfirmDeletionDialogComponent {
 
 
   constructor(public matDialogRef: MatDialogRef<ConfirmDeletionDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) private _matDialogData: any) {
+              @Inject(MAT_DIALOG_DATA) private _matDialogData: any,
+              private _studentsService: StudentsService) {
   }
 
 
@@ -25,5 +27,8 @@ export class ConfirmDeletionDialogComponent {
     this.onDelete.emit();
     // this.closeDialog(true);
     // this.matDialogRef.close();
+    // this._studentsService.delete(this._receivedData).subscribe((res) => {
+    //   this.closeDialog(true);
+    // });
   }
 }
