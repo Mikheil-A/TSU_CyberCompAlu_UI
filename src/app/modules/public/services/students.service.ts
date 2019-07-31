@@ -12,8 +12,8 @@ export class StudentsService {
   }
 
 
-  /*
-  TODO: create an interceptor:
+  /**
+   * TODO: create an interceptor:
    * https://www.google.com/search?client=firefox-b-d&q=unauthorized+interceptor+angular
    * https://blog.angularindepth.com/top-10-ways-to-use-interceptors-in-angular-db450f8a62d6
    * https://medium.com/@ryanchenkie_40935/angular-authentication-using-the-http-client-and-http-interceptors-2f9d1540eb8
@@ -38,7 +38,7 @@ export class StudentsService {
 
   getStudent(studentId: string) {
     return this._httpClient.get(`/api/users/${studentId}/edit`).pipe(
-      catchError(this._authService.handleUnauthorizedError()) // TODO do it using interceptor to check in every http request!!!!!
+      catchError(this._authService.handleUnauthorizedError()) // TODO: do it using interceptor to check in every http request!!!!!
     );
   }
 
@@ -54,7 +54,7 @@ export class StudentsService {
     return this._httpClient.post('/api/users/send_mail', data);
   }
 
-  uploadProfilePhoto(data: object){
+  uploadProfilePhoto(data: object) {
     return this._httpClient.put(`/api/users/${data['id']}`, data);
   }
 }
