@@ -8,8 +8,7 @@
 
     <label>დროის ინტერვალი</label>
     <mat-form-field appearance="outline">
-      <input formControlName="startDate" [disabled]="filterDataFormGroup.controls.endDate.value" matInput
-             [matDatepicker]="startDatePicker" placeholder="დასაწყისი">
+      <input formControlName="startDate" matInput [matDatepicker]="startDatePicker" placeholder="დასაწყისი">
       <mat-datepicker-toggle matSuffix [for]="startDatePicker">
         <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
       </mat-datepicker-toggle>
@@ -17,8 +16,7 @@
     </mat-form-field>
 
     <mat-form-field appearance="outline">
-      <input formControlName="endDate" [disabled]="filterDataFormGroup.controls.startDate.value" matInput
-             [matDatepicker]="endDatePicker" placeholder="დასასრული">
+      <input formControlName="endDate" matInput [matDatepicker]="endDatePicker" placeholder="დასასრული">
       <mat-datepicker-toggle matSuffix [for]="endDatePicker">
         <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
       </mat-datepicker-toggle>

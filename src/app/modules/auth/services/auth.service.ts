@@ -5,6 +5,7 @@ import {Router} from "@angular/router";
 import {throwError} from "rxjs";
 
 
+
 @Injectable()
 export class AuthService {
 
@@ -31,7 +32,7 @@ export class AuthService {
     return this._httpClient.post('/api/auth/login', requestData, options).pipe(
       map(res => {
         if (res['status'] === 200) {
-          this.saveUserSessionData(res['body'].token, res['body'].user_id, res['body']);
+          this.saveUserSessionData(res['body'].token, res['body'].user_id);
           return res['body'];
         }
       }),
@@ -68,9 +69,9 @@ export class AuthService {
     }
     if (loggedInUserData) {
       localStorage.setItem('userData', JSON.stringify(loggedInUserData));
-      if (loggedInUserData['profile']) {
-        localStorage.setItem('profile_id', JSON.stringify(loggedInUserData['profile'].id));
-      }
+      // if (loggedInUserData['profile']) {
+      //   localStorage.setItem('profile_id', JSON.stringify(loggedInUserData['profile'].id));
+      // }
     }
   }
 
@@ -86,8 +87,17 @@ export class AuthService {
     if (!this.isLoggedIn) {
       return;
     }
-    let profile = JSON.parse(localStorage.getItem('profile_id'));
-    // let profile = JSON.parse(localStorage.getItem('userData'))
-    return profile === 2; // if profile_id is 2, it's admin
+    let profile = JSON.parse(localStorage.getItem('userData'));
+    // let profile = JSON.parse(localStorage.getItem('profile_id'));
+    // return profile === 2; // if profile_id is 2, it's admin
+    if (!profile) {
+      setTimeout(() => {
+        profile = JSON.parse(localStorage.getItem('userData'));
+      }, 750);
+      if (profile)
+        return profile.profile_id === 2;
+    } else {
+      return profile.profile_id === 2;
+    }
   }
 }
